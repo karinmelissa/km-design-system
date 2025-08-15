@@ -1,0 +1,20 @@
+{
+  "extends": "@atomico/tsconfig/base.json",
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "test/**/*"
+  ],
+  "compilerOptions": {
+    // "jsx": "react",
+    "outDir": "types",
+    "baseUrl": ".",
+    "types": [
+      "vitest/globals"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true
+  }
+}

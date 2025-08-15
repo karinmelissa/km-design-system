@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.spec.ts",
+    "vitest.config.ts",
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "types": [],               // <-- esto es clave para evitar tipos de vitest/storybook
+    "skipLibCheck": true       // <-- ignora errores de tipos en .d.ts de dependencias
+  }
+}

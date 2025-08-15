@@ -1,0 +1,37 @@
+{
+  "ds": {
+    "primary":{
+      "color": {
+          "30": {
+            "value": "{ds.theme3.primary.30}",
+            "group": "brands"
+          },
+          "20": {
+            "value": "{ds.theme3.primary.20}",
+            "group": "brands"
+          },
+          "10": {
+            "value": "{ds.theme3.primary.10}",
+            "group": "brands"
+          },
+          "60": {
+            "value": "{ds.theme3.primary.60}",
+            "group": "brands"
+          },
+          "50": {
+            "value": "{ds.theme3.primary.50}",
+            "group": "brands"
+          },
+          "40": {
+            "value": "{ds.theme3.primary.40}",
+            "group": "brands"
+          },
+          "70": {
+            "value": "{ds.theme3.primary.70}",
+            "group": "brands"
+          }
+      
+      }
+    }
+  }
+}

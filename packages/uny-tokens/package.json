@@ -1,0 +1,40 @@
+{
+  "name": "@uikit/ds-tokens",
+   "type": "module",
+  "description": "Tokens",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./build.js && node writeTokens",
+    "exports": "node ./build.js && node writeTokens",
+    "clean": "rm -rf build",
+    "prepublishOnly": "npm run build",
+    "test": "echo no-test-needed",
+    "test:coverage": "echo no-test-needed",
+    "build-wc": "npm run build"
+  },
+  "devDependencies": {
+    "style-dictionary": "5.0.0"
+  },
+  "exports": {
+    "./grid": "./layout/grid.css",
+    "./typography": "./typography/typography.css",
+    "./blueCss": "./build/css/blue/blue.css",
+    "./theme1Css": "./build/css/theme1/theme1.css",
+    "./theme2Css": "./build/css/theme2/theme2.css",
+    "./theme1Scss": "./build/scss/theme1/theme1.scss",
+    "./theme2Scss": "./build/scss/theme2/theme2.scss",
+    "./jsTokens": "./build/js/tokens.js",
+    ".": "./index.js"
+  },
+  "typesVersions": {
+    "*": {
+      "tokens": [
+        "./src/tokens.d.ts"
+      ]
+    }
+  },
+  "overrides": {
+    "esbuild": "^0.24.3"
+  }
+}

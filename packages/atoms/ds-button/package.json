@@ -1,0 +1,140 @@
+{
+  "name": "@uikit/ds-button",
+  "description": "Button component",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build:types": "tsc -p tsconfig.build.json",
+    "build:compile": "library \"src/**/*\"",
+    "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
+    "build": "npm run build:types && npm run build:compile && npm run build:exports",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run test:coverage && npm run exports"
+  },
+  "dependencies": {
+    "@atomico/hooks": "^4.0.0",
+    "atomico": "latest"
+  },
+  "devDependencies": {
+    "@atomico/exports": "^1.13.2",
+    "@atomico/tsconfig": "^1.1.2",
+    "@atomico/vite": "^2.7.0",
+    "@uppercod/vite-meta-url": "latest",
+    "@uppercod/vite-meta-url-load-css": "latest",
+    "@vitest/coverage-v8": "^3.1.4",
+    "csso": "latest",
+    "jsdom": "^26.1.0",
+    "typescript": "^4.8.4",
+    "vite": "latest",
+    "vite-plugin-istanbul": "^3.0.1",
+    "vitest": "^3.1.4"
+  },
+  "peerDependencies": {
+    "@atomico/react": "*",
+    "@atomico/vue": "*"
+  },
+  "peerDependenciesMeta": {
+    "@atomico/react": {
+      "optional": true
+    },
+    "@atomico/vue": {
+      "optional": true
+    }
+  },
+  "module": "./dist/assets/index-Cp64lW33.js",
+  "exports": {
+    "./index.react": "./dist/index.react.js",
+    "./index.visibility": "./dist/index.visibility.css",
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./button": "./dist/button.js",
+    "./Button": "./dist/components/Button.js",
+    "./index.preact": "./dist/index.preact.js",
+    "./preact": {
+      "types": "./wrapper/preact.d.ts",
+      "default": "./wrapper/preact.js"
+    },
+    "./react": {
+      "types": "./wrapper/react.d.ts",
+      "default": "./wrapper/react.js"
+    },
+    "./index": {
+      "default": "./dist/assets/index-Cp64lW33.js"
+    },
+    "./assets/index-FQGWhwCi.css": {
+      "default": "./dist/assets/index-FQGWhwCi.css"
+    },
+    "./index-Cp64lW33": {
+      "default": "./dist/assets/index-Cp64lW33.js"
+    },
+    "./button.style": {
+      "types": "./types/button.style.d.ts",
+      "default": "./lib/button.style.js"
+    },
+    "./ds-button": {
+      "default": "./lib/ds-button.js"
+    },
+    "./components/Button": {
+      "types": "./types/components/Button.d.ts",
+      "default": "./lib/components/Button.js"
+    },
+    "./css/button.tokens": {
+      "types": "./types/css/button.tokens.d.ts",
+      "default": "./lib/css/button.tokens.js"
+    },
+    "./vue": {
+      "types": "./wrapper/vue.d.ts",
+      "default": "./wrapper/vue.js"
+    },
+    "./css/button.state.tokens": {
+      "types": "./types/css/button.state.tokens.d.ts",
+      "default": "./lib/css/button.state.tokens.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "index.react": [
+        "types/index.react.d.ts"
+      ],
+      "Button": [
+        "types/Button.d.ts"
+      ],
+      "index": [
+        "./types/index.d.ts"
+      ],
+      "index.preact": [
+        "types/index.preact.d.ts"
+      ],
+      "react": [
+        "wrapper/react.d.ts"
+      ],
+      "preact": [
+        "wrapper/preact.d.ts"
+      ],
+      "components/Button": [
+        "types/components/Button.d.ts"
+      ],
+      "button.style": [
+        "types/button.style.d.ts"
+      ],
+      "components/button.test": [
+        "types/components/button.test.d.ts"
+      ],
+      "css/button.tokens": [
+        "types/css/button.tokens.d.ts"
+      ],
+      "vue": [
+        "wrapper/vue.d.ts"
+      ],
+      "css/button.state.tokens": [
+        "types/css/button.state.tokens.d.ts"
+      ]
+    }
+  },
+  "types": "types/index.d.ts"
+}

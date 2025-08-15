@@ -1,0 +1,42 @@
+{
+  "ds": {
+    "globals": {
+      "font": {
+        "line": {
+          "height": {
+            "112": {
+              "value": "7rem"
+            },
+            "80": {
+              "value": "5rem"
+            },
+            "72": {
+              "value": "4.5rem"
+            },
+            "64": {
+              "value": "4rem"
+            },
+            "56": {
+              "value": "3.5rem"
+            },
+            "48": {
+              "value": "3rem"
+            },
+            "40": {
+              "value": "2.5rem"
+            },
+            "32": {
+              "value": "2rem"
+            },
+            "24": {
+              "value": "1.5rem"
+            },
+            "16": {
+              "value": "1rem"
+            }
+          }
+        }
+      }
+    }
+  }
+}

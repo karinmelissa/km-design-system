@@ -1,0 +1,46 @@
+{
+  "ds": {
+    "globals": {
+      "gradient": {
+        "purpleblue":{
+          "horizontally":{
+            "dark":{
+              "value":"linear-gradient(90deg, #232272 0%, #12122B 100%)"
+            },
+            "light":{
+              "value":"linear-gradient(90deg, #232272 0%, #5F5ECF 100%)"
+            }
+          },
+          "vertically":{
+            "light":{
+              "value": "linear-gradient(180deg, #232272 0%, #5F5ECF 100%)"
+            }
+          }
+        },
+        "purplered":{
+          "diagonally":{
+            "value":"linear-gradient(168deg, #232272 0%, #6A2E92 57.03%, #9A1F87 77.85%, #E60D2E 100%)"
+          }
+        },
+        "horizontally":{
+          "dark":{
+            "value":"{ds.globals.gradient.purpleblue.horizontally.dark}"
+          },
+          "light":{
+            "value":"{ds.globals.gradient.purpleblue.horizontally.light}"
+          }
+        },
+        "vertically": {
+          "light":{
+            "value":"{ds.globals.gradient.purpleblue.horizontally.light}"
+          }
+        },
+        "diagonally":{
+          "transversal":{
+            "value": "{ds.globals.gradient.purplered.diagonally}"
+          }
+        }
+      }
+    }
+  }
+}

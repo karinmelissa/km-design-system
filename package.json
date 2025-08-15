@@ -1,0 +1,54 @@
+{
+  "name": "ui-kit",
+  "workspaces": [
+    "packages/**"
+  ],
+  "scripts": {
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "build-all": "npm run build --workspaces",
+    "exports-all": "npm run exports --workspaces",
+    "build-exports-all": "npm run build-wc --workspaces",
+    "prepublishOnly-all": "npm run prepublishOnly --workspaces",
+    "test-all": "npm run test:coverage --workspaces",
+    "s-wc": "npm run start -w",
+    "b-wc": "npm run build -w",
+    "ex-wc": "npm run exports -w",
+    "lint": "eslint . --ext .js --ext .jsx --ext .tsx"
+  },
+  "devDependencies": {
+    "@atomico/storybook": "^2.5.0",
+    "@atomico/tsconfig": "^1.1.2",
+    "@atomico/vite": "^2.3.2",
+    "@babel/core": "^7.15.5",
+    "@etchteam/storybook-addon-css-variables-theme": "^3.0.0",
+    "@open-wc/testing": "^4.0.0",
+    "@storybook/addon-actions": "^8.6.14",
+    "@storybook/addon-docs": "^8.6.14",
+    "@storybook/addon-essentials": "^8.6.14",
+    "@storybook/addon-interactions": "^8.6.14",
+    "@storybook/addon-links": "^8.6.14",
+    "@storybook/addon-onboarding": "^8.6.14",
+    "@storybook/addon-themes": "^8.6.14",
+    "@storybook/blocks": "^8.6.14",
+    "@storybook/docs-tools": "^8.6.14",
+    "@storybook/react": "^8.6.14",
+    "@storybook/react-vite": "^8.6.14",
+    "@storybook/web-components": "^8.6.14",
+    "@storybook/web-components-vite": "^8.6.14",
+    "@web/test-runner": "^0.20.2",
+    "babel-loader": "^8.2.2",
+    "husky": "^8.0.3",
+    "storybook": "^8.6.14",
+    "typescript": "5.0.4",
+    "vitest": "^3.1.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm test-all"
+    }
+  },
+  "dependencies": {
+    "@atomico/exports": "1.13.2"
+  }
+}

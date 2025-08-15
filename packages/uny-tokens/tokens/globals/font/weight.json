@@ -1,0 +1,19 @@
+{
+  "ds": {
+    "globals": {
+      "font": {
+        "weight": {
+          "regular-400": {
+            "value": "400"
+          },
+          "semibold-600": {
+            "value": "600"
+          },
+          "bold-700": {
+            "value": "700"
+          }
+        }
+      }
+    }
+  }
+}

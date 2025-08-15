@@ -1,0 +1,1 @@
+export const Modal: import("@atomico/react/types/core/create-wrapper").Component<typeof import("@uikit/ds-modal/index").Modal>

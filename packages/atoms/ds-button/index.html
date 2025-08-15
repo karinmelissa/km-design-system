@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WC</title>
+    <script type="module">
+        import "@uikit/ds-tokens/theme1Css";
+    </script>
+
+    <script type="module" src="./src/index.tsx"></script>
+
+</head>
+
+<body>
+    <div>
+        <ds-button id="buttonprueba2" variant="primary" size="large">
+            <span slot="start">-</span>Enabled <span slot="end">+</span> </ds-button>
+        <ds-button id="buttonprueba2" variant="primary">Enabled</ds-button>
+        <ds-button id="buttonprueba2" variant="primary" size="small">Enabled</ds-button>
+        <ds-button id="buttonprueba" variant="primary" disabled>disabled</ds-button>
+
+        <br>
+        <br>
+        <ds-button id="buttonprueba" variant="secondary" disabled>disabled</ds-button>
+        <ds-button id="buttonprueba2" variant="secondary">no disabled </ds-button>
+        <br>
+        <br>
+        <ds-button id="buttonprueba" variant="tertiary" disabled>disabled</ds-button>
+        <ds-button id="buttonprueba2" variant="tertiary">no disabled </ds-button>
+        <br>
+
+        <ds-button state="error" id="buttonprueba2" variant="primary" size="large">
+            <span slot="start">-</span>Enabled <span slot="end">+</span> </ds-button>
+        <ds-button state="error" id="buttonprueba2" variant="secondary">no disabled </ds-button>
+
+        <ds-button state="warning" id="buttonprueba2" variant="primary" size="large">
+            <span slot="start">-</span>Enabled <span slot="end">+</span> </ds-button>
+
+        <ds-button state="warning" id="buttonprueba2" variant="secondary">no disabled </ds-button>
+        <ds-button state="success" id="buttonprueba2" variant="primary" size="large">
+            <span slot="start">-</span>Enabled <span slot="end">+</span> </ds-button>
+
+        <ds-button state="success" id="buttonprueba2" variant="secondary">no disabled </ds-button>
+        <ds-button state="info" id="buttonprueba2" variant="primary" size="large">
+            <span slot="start">-</span>Enabled <span slot="end">+</span> </ds-button>
+        <ds-button state="info" id="buttonprueba2" variant="secondary">no disabled </ds-button>
+
+        <br>
+        <br>
+
+</body>
+
+</html>

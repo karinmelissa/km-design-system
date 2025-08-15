@@ -1,0 +1,77 @@
+{
+  "name": "@uikit/ds-input",
+  "description": "Input component",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "test": "wtr src/**/*.test.js --node-resolve",
+    "test:watch": "wtr src/**/*.test.js --node-resolve --watch",
+    "test:coverage": "wtr src/**/*.test.js  --node-resolve --coverage",
+    "exports": "exports \"src/**/*.{ts,tsx}\" --exports --types --main index --analyzer",
+    "prepublishOnly": "npm run test:coverage && npm run exports",
+    "build-wc": "vite build && npm run exports"
+  },
+  "dependencies": {
+    "@atomico/hooks": "^3.13.1",
+    "atomico": "latest"
+  },
+  "devDependencies": {
+    "@atomico/exports": "^1.13.2",
+    "@atomico/tsconfig": "^1.1.2",
+    "@atomico/vite": "^2.7.0",
+    "@uppercod/vite-meta-url": "latest",
+    "@uppercod/vite-meta-url-load-css": "latest",
+    "csso": "latest",
+    "typescript": "^4.8.4",
+    "vite": "latest",
+    "vite-plugin-istanbul": "^3.0.1",
+    "vitest": "^3.1.4"
+  },
+  "peerDependencies": {
+    "@atomico/react": "latest"
+  },
+  "peerDependenciesMeta": {
+    "@atomico/react": {
+      "optional": true
+    }
+  },
+  "module": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./index.react": "./dist/index.react.js",
+    "./index.visibility": "./dist/index.visibility.css",
+    "./index": "./dist/index.js",
+    "./input": "./dist/input.js",
+    "./index.preact": "./dist/index.preact.js",
+    "./react": "./dist/react.js",
+    "./preact": "./dist/preact.js",
+    "./Input": "./dist/components/Input.js"
+  },
+  "typesVersions": {
+    "*": {
+      "index.react": [
+        "./types/index.react.d.ts"
+      ],
+      "index": [
+        "./types/index.d.ts"
+      ],
+      "input": [
+        "./types/input.d.ts"
+      ],
+      "index.preact": [
+        "./types/index.preact.d.ts"
+      ],
+      "react": [
+        "./types/react.d.ts"
+      ],
+      "preact": [
+        "./types/preact.d.ts"
+      ],
+      "Input": [
+        "./types/components/Input.d.ts"
+      ]
+    }
+  },
+  "types": "types/index.d.ts"
+}

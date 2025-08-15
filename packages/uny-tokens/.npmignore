@@ -1,0 +1,8 @@
+# We ignore all files in the repo
+/*
+# We unignore the dist folder
+!/build
+# We unignore the src & tokens folder
+!/src
+!/typography
+!/layout

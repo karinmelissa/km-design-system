@@ -1,0 +1,1 @@
+export const Button: import("@atomico/react/types/core/create-wrapper").Component<typeof import("@uikit/ds-button/index").Button>

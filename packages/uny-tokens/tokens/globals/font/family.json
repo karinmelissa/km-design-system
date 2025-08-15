@@ -1,0 +1,13 @@
+{
+  "ds": {
+    "globals": {
+      "font": {
+        "family": {
+          "primary": {
+            "value": "'Titillium Web', sans-serif"
+          }
+        }
+      }
+    }
+  }
+}
