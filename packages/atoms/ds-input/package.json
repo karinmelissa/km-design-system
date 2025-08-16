@@ -17,7 +17,7 @@
     "atomico": "latest"
   },
   "devDependencies": {
-    "@atomico/exports": "^0.37.0",
+    "@atomico/exports": "^1.13.2",
     "@atomico/tsconfig": "^1.1.2",
     "@atomico/vite": "^2.7.0",
     "@open-wc/testing": "^3.1.6",
