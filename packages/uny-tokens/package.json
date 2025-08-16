@@ -19,11 +19,14 @@
   "exports": {
     "./grid": "./layout/grid.css",
     "./typography": "./typography/typography.css",
-    "./blueCss": "./build/css/blue/blue.css",
     "./theme1Css": "./build/css/theme1/theme1.css",
     "./theme2Css": "./build/css/theme2/theme2.css",
+    "./theme3Css": "./build/css/theme3/theme3.css",
+    "./theme4Css": "./build/css/theme4/theme4.css",
     "./theme1Scss": "./build/scss/theme1/theme1.scss",
     "./theme2Scss": "./build/scss/theme2/theme2.scss",
+    "./theme3Scss": "./build/scss/theme3/theme3.scss",
+    "./theme4Scss": "./build/scss/theme4/theme4.scss",
     "./jsTokens": "./build/js/tokens.js",
     ".": "./index.js"
   },

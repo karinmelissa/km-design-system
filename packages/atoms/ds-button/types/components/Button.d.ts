@@ -1,18 +1,22 @@
 export declare const Button: import("atomico/types/dom").Atomico<{
-    variant: "tertiary" | "primary" | "secondary";
-    size: "large" | "medium" | "small";
+    variant: "primary" | "secondary" | "tertiary";
+    size: "lg" | "md" | "sm";
     state: "default" | "error" | "warning" | "success" | "info";
     disabled: boolean;
-    expand: string;
+    href: string;
+    loading: boolean;
+    icon: boolean;
 } & {
     name?: string;
     ariaLabel?: string;
 }, {
-    variant: "tertiary" | "primary" | "secondary";
-    size: "large" | "medium" | "small";
+    variant: "primary" | "secondary" | "tertiary";
+    size: "lg" | "md" | "sm";
     state: "default" | "error" | "warning" | "success" | "info";
     disabled: boolean;
-    expand: string;
+    href: string;
+    loading: boolean;
+    icon: boolean;
 } & {
     name?: string;
     ariaLabel?: string;

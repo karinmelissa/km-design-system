@@ -15,41 +15,82 @@
 
 <body>
     <div>
-        <ds-button id="buttonprueba2" variant="primary" size="large">
-            <span slot="start">-</span>Enabled <span slot="end">+</span> </ds-button>
-        <ds-button id="buttonprueba2" variant="primary">Enabled</ds-button>
-        <ds-button id="buttonprueba2" variant="primary" size="small">Enabled</ds-button>
-        <ds-button id="buttonprueba" variant="primary" disabled>disabled</ds-button>
-
+        <h1>Button variants</h1>
+        <div style="display: flex; gap:8px">
+            <ds-button id="buttonprueba2" variant="primary" size="lg">Primary LG</ds-button>
+            <ds-button id="buttonprueba2" variant="primary" size="lg" loading>Primary LG</ds-button>
+            <ds-button id="buttonprueba2" variant="primary" size="lg" href="https://google.com">Button Link</ds-button>
+            <ds-button id="buttonprueba2" variant="primary">Primary MD</ds-button>
+            <ds-button id="buttonprueba2" variant="primary" size="sm">Primary sm</ds-button>
+            <ds-button id="buttonprueba" variant="primary" disabled>Primary disabled</ds-button>
+        </div>
         <br>
+        <div style="display: flex; gap:8px">
+            <ds-button id="buttonprueba" variant="secondary" size="lg">Secondary lg</ds-button>
+            <ds-button id="buttonprueba2" variant="secondary">Secondary md</ds-button>
+            <ds-button id="buttonprueba" variant="secondary" size="sm">Secondary sm</ds-button>
+            <ds-button id="buttonprueba" variant="secondary" disabled>Secondary disabled</ds-button>
+        </div>
         <br>
-        <ds-button id="buttonprueba" variant="secondary" disabled>disabled</ds-button>
-        <ds-button id="buttonprueba2" variant="secondary">no disabled </ds-button>
-        <br>
-        <br>
-        <ds-button id="buttonprueba" variant="tertiary" disabled>disabled</ds-button>
-        <ds-button id="buttonprueba2" variant="tertiary">no disabled </ds-button>
-        <br>
-
-        <ds-button state="error" id="buttonprueba2" variant="primary" size="large">
-            <span slot="start">-</span>Enabled <span slot="end">+</span> </ds-button>
-        <ds-button state="error" id="buttonprueba2" variant="secondary">no disabled </ds-button>
-
-        <ds-button state="warning" id="buttonprueba2" variant="primary" size="large">
-            <span slot="start">-</span>Enabled <span slot="end">+</span> </ds-button>
-
-        <ds-button state="warning" id="buttonprueba2" variant="secondary">no disabled </ds-button>
-        <ds-button state="success" id="buttonprueba2" variant="primary" size="large">
-            <span slot="start">-</span>Enabled <span slot="end">+</span> </ds-button>
-
-        <ds-button state="success" id="buttonprueba2" variant="secondary">no disabled </ds-button>
-        <ds-button state="info" id="buttonprueba2" variant="primary" size="large">
-            <span slot="start">-</span>Enabled <span slot="end">+</span> </ds-button>
-        <ds-button state="info" id="buttonprueba2" variant="secondary">no disabled </ds-button>
-
-        <br>
+        <div style="display: flex; gap:8px">
+            <ds-button id="buttonprueba" variant="tertiary" size="lg">Tertiary lg</ds-button>
+            <ds-button id="buttonprueba2" variant="tertiary">Tertiary md</ds-button>
+            <ds-button id="buttonprueba" variant="tertiary" size="sm">Tertiary sm</ds-button>
+            <ds-button id="buttonprueba" variant="tertiary" disabled>Tertiary disabled</ds-button>
+        </div>
         <br>
 
+        <h1>Button states</h1>
+        <div style="display: flex; gap:8px">
+            <ds-button state="info" id="buttonprueba2" variant="primary">Info primary</ds-button>
+            <ds-button state="info" id="buttonprueba2" variant="secondary">Info Secondary</ds-button>
+            <ds-button state="info" id="buttonprueba2" variant="tertiary">Info Tertiary</ds-button>
+        </div>
+        <br>
+        <div style="display: flex; gap:8px">
+            <ds-button state="error" id="buttonprueba2" variant="primary">Error primary</ds-button>
+            <ds-button state="error" id="buttonprueba2" variant="secondary">Error Secondary</ds-button>
+            <ds-button state="error" id="buttonprueba2" variant="tertiary">Error Tertiary</ds-button>
+        </div>
+        <br>
+        <div style="display: flex; gap:8px">
+            <ds-button state="success" id="buttonprueba2" variant="primary">Success primary</ds-button>
+            <ds-button state="success" id="buttonprueba2" variant="secondary">Success Secondary</ds-button>
+            <ds-button state="success" id="buttonprueba2" variant="tertiary">Success Tertiary</ds-button>
+        </div>
+        <br>
+        <div style="display: flex; gap:8px">
+            <ds-button state="warning" id="buttonprueba2" variant="primary">Warning primary</ds-button>
+            <ds-button state="warning" id="buttonprueba2" variant="secondary">Warning Secondary</ds-button>
+            <ds-button state="warning" id="buttonprueba2" variant="tertiary">Warning Tertiary</ds-button>
+        </div>
+        <h1>Icon button</h1>
+                <div style="display: flex; gap:8px">
+
+               <ds-button size="md" variant="primary" icon>
+            <svg slot="start" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 1024 1024"><path d="M128 384v512h768V192H768v32a32 32 0 1 1-64 0v-32H320v32a32 32 0 0 1-64 0v-32H128v128h768v64H128zm192-256h384V96a32 32 0 1 1 64 0v32h160a32 32 0 0 1 32 32v768a32 32 0 0 1-32 32H96a32 32 0 0 1-32-32V160a32 32 0 0 1 32-32h160V96a32 32 0 0 1 64 0v32zm-32 384h64a32 32 0 0 1 0 64h-64a32 32 0 0 1 0-64zm0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64zm192-192h64a32 32 0 0 1 0 64h-64a32 32 0 0 1 0-64zm0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64zm192-192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64zm0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64z"/></svg>
+        </ds-button>
+
+
+        <ds-button size="md" variant="primary">
+            <svg slot="start" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 1024 1024"><path d="M529.408 149.376a29.12 29.12 0 0 1 41.728 0 30.592 30.592 0 0 1 0 42.688L259.264 511.936l311.872 319.936a30.592 30.592 0 0 1-.512 43.264 29.12 29.12 0 0 1-41.216-.512L197.76 534.272a32 32 0 0 1 0-44.672l331.648-340.224zm256 0a29.12 29.12 0 0 1 41.728 0 30.592 30.592 0 0 1 0 42.688L515.264 511.936l311.872 319.936a30.592 30.592 0 0 1-.512 43.264 29.12 29.12 0 0 1-41.216-.512L453.76 534.272a32 32 0 0 1 0-44.672l331.648-340.224z"/></svg>
+            Button Icon
+            <svg slot="end" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 1024 1024"><path d="M452.864 149.312a29.12 29.12 0 0 1 41.728.064L826.24 489.664a32 32 0 0 1 0 44.672L494.592 874.624a29.12 29.12 0 0 1-41.728 0 30.592 30.592 0 0 1 0-42.752L764.736 512 452.864 192a30.592 30.592 0 0 1 0-42.688zm-256 0a29.12 29.12 0 0 1 41.728.064L570.24 489.664a32 32 0 0 1 0 44.672L238.592 874.624a29.12 29.12 0 0 1-41.728 0 30.592 30.592 0 0 1 0-42.752L508.736 512 196.864 192a30.592 30.592 0 0 1 0-42.688z"/></svg>
+        </ds-button>
+
+        <ds-button size="md" variant="primary">
+            <svg slot="start" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 1024 1024"><path d="M128 384v512h768V192H768v32a32 32 0 1 1-64 0v-32H320v32a32 32 0 0 1-64 0v-32H128v128h768v64H128zm192-256h384V96a32 32 0 1 1 64 0v32h160a32 32 0 0 1 32 32v768a32 32 0 0 1-32 32H96a32 32 0 0 1-32-32V160a32 32 0 0 1 32-32h160V96a32 32 0 0 1 64 0v32zm-32 384h64a32 32 0 0 1 0 64h-64a32 32 0 0 1 0-64zm0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64zm192-192h64a32 32 0 0 1 0 64h-64a32 32 0 0 1 0-64zm0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64zm192-192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64zm0 192h64a32 32 0 1 1 0 64h-64a32 32 0 1 1 0-64z"/></svg>
+            Calendario
+        </ds-button>
+
+        <ds-button size="sm" variant="secondary">
+            Cancelar
+            <svg slot="end" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 1024 1024"><path d="M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z"/></svg>
+        </ds-button>
+
+        </div>
+
+    </div>
 </body>
 
 </html>

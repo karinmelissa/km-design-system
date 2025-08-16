@@ -11,12 +11,22 @@ const { args, argTypes } = define(Button, {
     },
     size: {
       control: "select",
-      options: ["small", "medium", "large"],
+      options: ["sm", "md", "lg"],
     },
     state: {
       control: "select",
       options: ["default","success", "warning","info","error"],
     },
+    disabled:{
+      control: "boolean",
+    },
+     loading:{
+      control: "boolean",
+    },
+    href:{
+      control: "text",
+      description: "If provided, the button will render as an anchor tag.",
+    }
   },
 })
 
@@ -35,6 +45,7 @@ export default {
     },
   },
   decorators: [withActions],
+  tags: ['autodocs'],
 };
 
 const Template  = ({
@@ -44,6 +55,9 @@ const Template  = ({
   state,
   variant,
   size,
+  disabled,
+  loading,
+  href,
   ...props
 }: typeof Button.props & {
   slotIconStart:string;
@@ -52,10 +66,16 @@ const Template  = ({
   variant:string;
   size:string;
   state?:string;
+  diabled?:boolean;
+  loading?:boolean;
+  href?:string;
 }) => html`<ds-button 
   state=${state}
   variant=${variant}
   size=${size}
+  disabled=${disabled}
+  loading=${loading}
+  href=${href}
   innerHTML="${slotIconStart + " " + textLabel +"" + slotIconEnd}"
   ${{ ...props }}></ds-button>`;
 ;
@@ -107,3 +127,35 @@ Success.args = {
   slotIconEnd:'',
   textLabel:'State Button'
 };
+
+export const  Error = Template.bind({});
+
+Error.args = {
+  disabled: false,
+  state: "error",
+  slotIconStart:'',
+  slotIconEnd:'',
+  textLabel:'State Button'
+};
+
+export const  Info = Template.bind({});
+
+Info.args = {
+  disabled: false,
+  state: "info",
+  slotIconStart:'',
+  slotIconEnd:'',
+  textLabel:'State Button'
+};
+
+export const  Warning = Template.bind({});
+
+Warning.args = {
+  disabled: false,
+  state: "warning",
+  slotIconStart:'',
+  slotIconEnd:'',
+  textLabel:'State Button'
+};
+
+

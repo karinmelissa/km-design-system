@@ -1,29 +1,6 @@
 import { getToken } from "./css/button.tokens";
 import { getStateToken } from "./css/button.state.tokens";
 
-/* Variant
-- Filled
-- Outlined
-- Text
-- Icon
-*/
-
-
-/* Color
-* primary
-* secondary
-* ternary
-* success
-* warning
-*/
-
-
-
-/* Esta función genera los tokens necesarios para poder sobreescribir
-* la asociación por defecto de --ds-primary con button-primary
-* de esta manera poder asignar como botón primario/secundario etc.
-* a un color distinto de la paleta.
-* */
 
 
 export const customProperties = (variant:string, state:string) => {  
@@ -45,6 +22,8 @@ export const customProperties = (variant:string, state:string) => {
             --border-color: var(--ds-button--border-color);
             --border-width-focus: var(--ds-button--border-width-focus);
             --border-color-focus: var(--ds-button--border-color-focus);
+            --border-color-disabled: var(--ds-button--border-color-disabled);
+            --border-width-disabled: var(--ds-button--border-width);
             --padding-top: 0;
             --padding-bottom: 0;
             --padding-right: var(--spacing-s-3);
@@ -52,6 +31,6 @@ export const customProperties = (variant:string, state:string) => {
             --min-height: 32px;
             --font-family: var(--ds-font-family);
         }`,
-    state !='default' && variant!='tertiary'? getStateToken(variant,state): getToken(variant),
+    state !='default'? getStateToken(variant,state): getToken(variant),
     ]
 };

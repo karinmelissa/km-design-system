@@ -1,5 +1,5 @@
 import {
-  c, useRef, css, useProp, Props,
+  c, useRef, css, Props,
 } from "atomico";
 import { customProperties } from "../button.style";
 
@@ -7,31 +7,44 @@ import { customProperties } from "../button.style";
  *
  * @param {import("atomico").Props<button.props>} props
  */
-function ButtonComponent({ variant, size, state ,disabled }: Props<typeof ButtonComponent>) {
+function ButtonComponent({ variant, size, state, disabled, href, loading, icon }: Props<typeof ButtonComponent>) {
 
   const refSlotIconLeft = useRef();
   const refSlotIconRight = useRef();
   const refSlotContent = useRef();
-  const buttonOutRef = useRef();
 
-
-  //Compruebo si existen los slot para poder condicionar estilos
-  /* const slotIcon = useSlot(refSlotIcon);
-    const slotContent = useSlot(refSlotContent); */
-
+  const Tag = href ? "a" : "button";
+  const isDisabled = disabled || loading;
 
   return (
     <host shadowDom>
       <style>{customProperties(variant, state)}</style>
-      <button
-        className={`button-size__${size}`}
-        disabled={disabled}>
-        <slot ref={refSlotIconLeft} name="start"></slot>
-        <span className="label">
-          <slot ref={refSlotContent}></slot>
-        </span>
-        <slot ref={refSlotIconRight} name="end"></slot>
-      </button>
+      <Tag
+        className={`button-size__${size} ${loading ? "is-loading" : ""} ${icon ? "button--icon" : ""}`} disabled={!href ? isDisabled : undefined}
+        href={href || undefined}
+        aria-busy={loading}
+      >
+        {loading ? (
+          <span className="spinner"></span>
+        ) : (
+          <>
+            {icon ? (
+              <>
+                <slot ref={refSlotIconLeft} name="start"></slot>
+                <slot ref={refSlotIconRight} name="end"></slot>
+              </>
+            ) : (
+              <>
+                <slot ref={refSlotIconLeft} name="start"></slot>
+                <span className="label">
+                  <slot ref={refSlotContent}></slot>
+                </span>
+                <slot ref={refSlotIconRight} name="end"></slot>
+              </>
+            )}
+          </>
+        )}
+      </Tag>
     </host>
   );
 }
@@ -47,84 +60,93 @@ ButtonComponent.props = {
   size: {
     type: String,
     reflect: true,
-    value: (): "large" | "medium" | "small" => "medium",
+    value: (): "lg" | "md" | "sm" => "md",
   },
   state: {
     type: String,
     reflect: true,
-    value: (): "default" | "error" | "warning" | "success"  | "info" => "default",
+    value: (): "default" | "error" | "warning" | "success" | "info" => "default",
   },
   disabled: {
     type: Boolean,
     reflect: true,
     value: false,
   },
-  expand: {
+  href: {
     type: String,
     reflect: true,
-    value: "block",
+    value: "",
   },
+  loading: {
+    type: Boolean,
+    reflect: true,
+    value: false,
+  },
+  icon: { type: Boolean, reflect: true, value: false }
 };
 
-/* Acá manejamos los estilos que no dependen de una variable para realizar al */
+/* Estilos */
 ButtonComponent.styles = [
   css`
-    /*
-    * Prefixed by https://autoprefixer.github.io
-    * PostCSS: v8.3.6,
-    * Autoprefixer: v10.3.1
-    * Browsers: last 4 version
-    */
-
-    button {
+    button,
+    a {
       background-color: var(--background);
       color: var(--color);
-      border-radius: var(--border-radius,32px);
+      border-radius: var(--border-radius, 32px);
       border-style: var(--border-style);
       border-width: var(--border-width);
       border-color: var(--border-color);
-      text-align: center; 
+      text-align: center;
       vertical-align: middle;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      gap: 0.75rem;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
+      gap: 0.5rem;
       align-items: center;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
       justify-content: center;
-      box-sizing:border-box;
-
-      .label{
-      line-height: 24px;
+      box-sizing: border-box;
+      text-decoration: none;
+      position: relative;
+      font-family: var(--ds-globals-font-family-primary, inherit);
       font-size: 16px;
       font-weight: 500;
+      line-height: 24px;
+
+      .label {
+        font: inherit;
       }
     }
 
-    button:enabled {
+    button:enabled,
+    a:enabled {
       cursor: pointer;
     }
-    button:active {
+
+    button:active,
+    a:active {
       color: var(--color-active);
       background: var(--background-active);
       border-color: var(--border-color-active);
     }
-    button:focus-visible {
+
+    button:focus-visible,
+    a:focus-visible {
       color: var(--color-focus);
       background: var(--background-focus);
       border: var(--border-width-focus) solid var(--border-color-focus);
       outline: none;
     }
-    button:disabled {
+
+    button:disabled,
+    a[aria-busy="true"] {
       background-color: var(--background-disabled);
       color: var(--color-disabled);
+      border-color: var(--border-color-disabled);
+      border-width: var(--border-width-disabled, 0px);
       cursor: not-allowed;
-      border: none;
+      pointer-events: none;
     }
-    button:hover:enabled:not(:active)  {
+
+    button:hover:enabled:not(:active),
+    a:hover:not([aria-busy="true"]) {
       background-color: var(--background-hover);
       color: var(--color-hover);
       border-color: var(--border-color-hover);
@@ -134,48 +156,53 @@ ButtonComponent.styles = [
       pointer-events: none;
     }
 
-    :host([variant="text"]) button:disabled {
-      --background-disabled: transparent;
-    }
-    :host([variant="text"]) button:hover(:not, :disabled) {
-      background-color: var(--background-hover);
-      color: var(--color-hover);
-      opacity: 0.5;
-    }
-    :host([expand="full"]) button {
-      width: 100%;
-    }
-
-    :host([variant="outlined"]) button,
-    :host([variant="text"]) button {
-      --background: "transparent";
-      --color: var(--ds-color-text);
-    }
-
     ::slotted([slot="start"]),
     ::slotted([slot="end"]) {
-      display: block;
+    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px ;
+    height: 16px;
+    flex-shrink: 0;
+    color: inherit;
+    fill: currentColor; 
+    }
+    .button-size__sm {
+      padding: 8px 16px;
     }
 
-    .button-size__small{
-      padding-top: 8px;
-      padding-right: 16px;
-      padding-bottom: 8px;
-      padding-left: 16px;
+    .button-size__md {
+      padding: 12px 24px;
     }
 
-    .button-size__medium{
-      padding-top: 12px;
-      padding-right: 24px;
-      padding-bottom: 12px;
-      padding-left: 24px;
+    .button-size__lg {
+      padding: 16px 32px;
     }
 
-    .button-size__large{
-      padding-top: 16px;
-      padding-right: 32px;
-      padding-bottom: 16px;
-      padding-left:32px;
+     .button--icon.button-size__sm {
+     padding: 8px;
+   }
+   .button--icon.button-size__md {
+     padding: 12px;
+   }
+
+   .button--icon.button-size__lg {
+     padding: 16px;
+   }
+
+    .spinner {
+      border: 2px solid var(--color-disabled, #ccc);
+      border-top: 2px solid var(--color, #000);
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      animation: spin 0.8s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
   `,
 ];

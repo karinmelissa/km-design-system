@@ -2,8 +2,6 @@ import { define } from "@atomico/storybook";
 import { Modal } from '@uikit/ds-modal';
 import { html } from "atomico";
 import { withActions } from '@storybook/addon-actions/decorator';
-import { title } from "process";
-import { Subtitle } from "@storybook/blocks";
 
 const { args, argTypes } = define(Modal, {
   argTypes: {
@@ -66,5 +64,5 @@ Playground.args ={
   slotFooter:`<div slot="footer">
             <ds-button variant="secondary">Cancel</ds-button>
             <ds-button variant="primary">Save</ds-button>
-        </div>>`,
+        </div>`,
 };

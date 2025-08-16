@@ -5,11 +5,10 @@ import '@uikit/ds-button';
  *
  * @param {import("atomico").Props<button.props>} props
  */
-function ModalComponent({ title, subtitle, state, onClose, open }) {
+function ModalComponent({ title, subtitle, onClose, open }) {
     const refSlotFooter = useRef();
     const refSlotContent = useRef();
 
-    // Si open es false, no renderiza el modal
     if (!open) return null;
 
     return (
@@ -23,8 +22,9 @@ function ModalComponent({ title, subtitle, state, onClose, open }) {
                         class="modal__close"
                         aria-label="Cerrar"
                         onclick={onClose}
+                        icon
                     >
-                        ×
+                    <svg slot="end" xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 1024 1024"><path d="M764.288 214.592 512 466.88 259.712 214.592a31.936 31.936 0 0 0-45.12 45.12L466.752 512 214.528 764.224a31.936 31.936 0 1 0 45.12 45.184L512 557.184l252.288 252.288a31.936 31.936 0 0 0 45.12-45.12L557.12 512.064l252.288-252.352a31.936 31.936 0 1 0-45.12-45.184z"/></svg>
                     </ds-button>
                 </div>
                 <div className="modal__content">
@@ -50,15 +50,10 @@ ModalComponent.props = {
         reflect: true,
         value: (): string => "",
     },
-    state: {
-        type: String,
-        reflect: true,
-        value: (): "default" | "error" | "warning" | "success" | "info" => "default",
-    },
     open: {
         type: Boolean,
         reflect: true,
-        value: true, // El modal está abierto por defecto
+        value: true,
     },
     onClose: Function,
 };
@@ -75,7 +70,7 @@ ModalComponent.styles = [
             display: flex;
             border: 1px solid var(--ds-globals-color-neutrals-30);
             flex-direction: column;
-            font-family: inherit;
+            font-family: var(--ds-globals-font-family-primary, inherit);
         }
         .modal__header {
             display: flex;
@@ -83,15 +78,13 @@ ModalComponent.styles = [
             justify-content: space-between;
             position: relative;
 
-            h4{
-                font-family: Figtree;
+            h4{ 
                 font-weight: 700;
                 font-size: 24px;
                 margin: 0;
             }
         }
-        .modal__subtitle{
-           font-family: Figtree;
+        .modal__subtitle{ 
             font-weight: 700;
             font-size: 16px;
             line-height: 24px;

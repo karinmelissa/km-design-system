@@ -20,6 +20,8 @@ const customProperties = (variant, state) => {
             --border-color: var(--ds-button--border-color);
             --border-width-focus: var(--ds-button--border-width-focus);
             --border-color-focus: var(--ds-button--border-color-focus);
+            --border-color-disabled: var(--ds-button--border-color-disabled);
+            --border-width-disabled: var(--ds-button--border-width);
             --padding-top: 0;
             --padding-bottom: 0;
             --padding-right: var(--spacing-s-3);
@@ -27,7 +29,7 @@ const customProperties = (variant, state) => {
             --min-height: 32px;
             --font-family: var(--ds-font-family);
         }`,
-    state != "default" && variant != "tertiary" ? getStateToken(variant, state) : getToken(variant)
+    state != "default" ? getStateToken(variant, state) : getToken(variant)
   ];
 };
 
