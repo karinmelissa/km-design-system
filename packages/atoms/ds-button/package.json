@@ -3,9 +3,6 @@
   "description": "Button component",
   "version": "1.0.0",
   "type": "module",
-   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "scripts": {
     "start": "vite",
     "build:types": "tsc -p tsconfig.build.json",
