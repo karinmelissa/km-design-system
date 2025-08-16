@@ -1,5 +1,5 @@
 {
-  "name": "ui-kit",
+  "name": "uikit",
   "private": true,
   "workspaces": [
     "packages/atoms/*",
