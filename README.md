@@ -1,101 +1,120 @@
 # Design System UI Kit 
 
-UI Kit pattern library based on Web Components
+A **UI Kit pattern library** based on **Web Components**.
 
-- Atomico con Shadow DOM.
-- Vite para bulding.
-- Web Test Runner/atomico-dom para test.
-- Storybook para documentación.
-- Styled dictionary para tokens.
-- Npm Workspaces para administración de MonoRepo Multipackages.
+## 🔧 Tech Stack 
+- Atomico with Shadow DOM.
+- Vite for development and building.
+- Web Test Runner/atomico-dom for testing.
+- Storybook as the documentation tool.
+- Style dictionary for token management.
+- Npm Workspaces for managing a multi-package monorepo.
 
-⚠️ ⚠️ **IMPORTANTE** ⚠️ ⚠️: Para poder usar npm workspaces se debe tener instalada la **versión 7 de npm.**
-Para consultar la versión de Node que posee actualmente ejecutar ` node -v ` en su terminal.
-Para actualizar la versión de Node puede realizarlo via Homebrew con `brew upgrade node ` o con el administrador de paquetes de node `sudo n latest`
 
-## Instalación
+⚠️ **Important:** : This project requires **npm v7+** to properly support workspaces.
 
-En la **raiz del proyecto** ejecutamos:</strong>
+
+## 🚀 Installation
+
+From the **project root**, run:
 
 ````
 npm install --workspaces
 ````
 
-### Levantar un paquete en modo desarrollo
+## 🛠️ Development
+
+**Start a package** in dev mode:
 
 `````
-npm run start <path-to-packages> // <path-to-packages> => packages/ds-button
+npm run start <path-to-package> 
+# Example:
+npm run start packages/ds-button
 `````
 
-### Build
+## 📦Build
 
 #### Exports
-Generará los archivos de exportación ( production ) para ser consumidos desde alguna app.
+Generate production-ready export files to be consumed by other applications.
 
 `````
-<!-- Exports de un componente -->
-npm run build:exports <path-to-packages> // <path-to-packages> => packages/ds-button
+# Export a single component
+npm run build:exports <path-to-package> 
 
-<!-- Exports de todos los componentes -->
+# Export all components
 npm run exports-all
 `````
 
-`````
-<!-- Build de un componente -->
-npm run build <path-to-packages> // <path-to-packages> => packages/ds-button
+#### Build Package(s)
 
-<!-- Build de todos los componentes -->
+`````
+# Build a single component
+npm run build <path-to-package> 
+
+# Build all components
 npm run build-all
 `````
 
-### Storybook
-Storybook nos permitirá publicar la documentación asociada a nuestros web componente, encontraremos aqui instrucciones de instalación, detalles de la funcionalidad de nuestro componente, atributos, propiedades, eventos y propiedades css asociadas.
+## 🖼️ Storybook
+Storybook provides documentation for each web component, including:
+
+- Installation instructions
+- Component functionality
+- Attributes & properties
+- Events
+- Available CSS properties
+
+Run Storybook locally:
 
 `````
 npm run storybook
 `````
 
-### Chromatic
--- TODO -- 
-Chromatic es una herramienta que nos permite realizar los test de regresión visual de nuestros componentes.
-Se debe realizar siempre previo a un release a master, con el fin de comprobar en conjunto con el equipo de diseño que los componentes cumplen con los estandares de diseño y que no se ha pasado a llevar algun estilo que ya estaba aprobado. 
-`````
-npm run chromatic
-`````
 
-### Agregar dependencias a un paquete
-Al trabajar con npm workspaces, para que las dependencias queden correctamente compartidas deben ser instaladas desde la raiz apuntando al paquete al cual se desean instalar, para mas información leer sobre <a href="https://docs.npmjs.com/cli/v7/using-npm/workspaces">npm workspaces</a> 
+## 📦 Add Dependencies to a Package
+When using npm workspaces, dependencies must be installed from the root, targeting the correct package.
 
 `````
+npm install <dependency-name> -w <path-to-package>
 
-npm run install <name-dependency> -w <path-to-package>
-
-<!-- Ejemplo: Instalar una dependencia llamada 'dep' en el paquete ds-button -->
-npm run install dep -w packages/ds-button
+# Example: install "dep" in ds-button package
+npm install dep -w packages/ds-button
 `````
 
+More info: [npm workspaces documentation](https://docs.npmjs.com/cli/v7/using-npm/workspaces)
 
-### Test
-- WIP - 
 
-Los test están ambientados siguiendo las recomendaciones de uso de Web con: 
-    - <a href="https://modern-web.dev/docs/test-runner/overview/"> Web Test Runner </a>,
-    - <a href="https://open-wc.org/docs/testing/helpers/"> open-wc/testing </a>
-    - esm-chai
+## ✅ Testing
+Testing setup follows web component testing best practices with:
 
-Para ejecutar los test con coverage en todos los paquetes, ejecutar :
+- [Web Test Runner](https://modern-web.dev/docs/test-runner/overview/)
+- [open-wc/testing](https://open-wc.org/docs/testing/helpers/)
+- esm-chai
+
+
+Run all tests with coverage:
 
 `````
 npm run test-all 
 `````
 
-Para correr los test con coverage en un paquete en particular ejecutar :
+Run tests with coverage for a specific package:
+
 `````
 npm run test:coverage -w <path-to-package> 
 `````
 
-Para correr los test en *** modo watch ***  en un paquete en particular ejecutar :
+Run tests in watch mode for a specific package:
 `````
 npm run test:watch -w <path-to-package>
 `````
 
+
+✨ With this workflow, the Design System remains scalable, maintainable, and consistent across projects.
+
+## 👤 Author / Ownership
+
+This Design System UI Kit (demo)is created and maintained by:
+- Karin Escobar
+- Email : km.escobartoledo@gmail.com
+- GitHub : [@karinmelissa](https://github.com/karinmelissa)
