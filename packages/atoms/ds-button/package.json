@@ -1,8 +1,11 @@
 {
-  "name": "@uikit/ds-button",
+  "name": "@karinmelissa/ds-button",
   "description": "Button component",
   "version": "1.0.0",
   "type": "module",
+   "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "scripts": {
     "start": "vite",
     "build:types": "tsc -p tsconfig.build.json",
@@ -11,8 +14,7 @@
     "build": "npm run build:types && npm run build:compile && npm run build:exports",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:coverage": "vitest run --coverage",
-    "prepublishOnly": "npm run test:coverage && npm run exports"
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
     "@atomico/hooks": "^4.0.0",

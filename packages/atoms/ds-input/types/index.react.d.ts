@@ -1,1 +1,0 @@
-export const Input: import("@atomico/react/types/core/create-wrapper").Component<typeof import("@uikit/ds-input/index").Input>

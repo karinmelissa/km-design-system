@@ -1,16 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WC Input</title>
-    <!-- <link rel="stylesheet" href="./src/css/thema3.css">
-    <link rel="stylesheet" href="./src/css/thema2.css"> -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta slot="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Unity Input Component</title>
 
-    <script type="module" src="./src/index.tsx"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+		/>
+		<script type="module" src="./src/index.tsx"></script>
+		<!--Se puede importar una hoja de estilos distinta para cambiar la paleta-->
+		<script type="module">
+			import "@uikit/ds-tokens/theme1Css";
+		</script>
+	</head>
 
-</head>
-<body>
-    <ds-input></ds-input>
-</body>
+	<body>
+		<div>
+			<h1>Input type text</h1>
+			<div>
+				<uny-input type="text" id="input1"></uny-input>
+			</div>
+			<br />
+			<h1>Input type passworwd</h1>
+
+			<div>
+				<uny-input type="password" autocapitalize="sentence"> </uny-input>
+			</div>
+			<br />
+			<h2>With Icon</h2>
+			<div>
+				<p>Two icons :</p>
+				<uny-input type="text">
+					<span slot="start" class="mdi mdi-account-circle-outline"></span>
+					<span slot="end" class="mdi mdi-account-circle-outline"></span>
+				</uny-input>
+				<uny-input type="text">
+					<span slot="start" class="mdi mdi-account-circle-outline"></span>
+				</uny-input>
+				<p>Icon start :</p>
+				<uny-input>
+					<span slot="start" class="mdi mdi-account-circle-outline"></span>
+				</uny-input>
+				<p>Icon end :</p>
+				<uny-input>
+					<span slot="end" class="mdi mdi-account-circle-outline"></span>
+				</uny-input>
+			</div>
+
+			<h2>States</h2>
+			<h3>Success</h3>
+			<div>
+				<uny-input type="text" state="success"></uny-input>
+				<uny-input
+					type="password"
+					state="success"
+					autocapitalize="sentence"
+				></uny-input>
+			</div>
+			<div>
+				<p>Two icons :</p>
+				<uny-input type="text" state="success">
+					<span slot="start" class="mdi mdi-account-circle-outline"></span>
+					<span slot="end" class="mdi mdi-account-circle-outline"></span>
+				</uny-input>
+				<p>Icon start :</p>
+				<uny-input state="success">
+					<span slot="start" class="mdi mdi-account-circle-outline"></span>
+				</uny-input>
+				<p>Icon end :</p>
+				<uny-input state="success">
+					<span slot="end" class="mdi mdi-account-circle-outline"></span>
+				</uny-input>
+			</div>
+			<h3>Error</h3>
+			<div>
+				<uny-input type="text" state="error"></uny-input>
+				<uny-input
+					type="password"
+					state="error"
+					autocapitalize="sentence"
+				></uny-input>
+			</div>
+			<div>
+				<p>Two icons :</p>
+				<uny-input type="text" state="error">
+					<span slot="start" class="mdi mdi-account-circle-outline"></span>
+					<span slot="end" class="mdi mdi-account-circle-outline"></span>
+				</uny-input>
+				<p>Icon start :</p>
+				<uny-input state="error">
+					<span slot="start" class="mdi mdi-account-circle-outline"></span>
+				</uny-input>
+				<p>Icon end :</p>
+				<uny-input state="error">
+					<span slot="end" class="mdi mdi-account-circle-outline"></span>
+				</uny-input>
+			</div>
+		</div>
+		<br />
+		<h1>Input disabled</h1>
+		<div>
+			<p>Text :</p>
+			<uny-input type="text" disabled></uny-input>
+			<p>Password :</p>
+			<uny-input type="password" disabled>
+				<span slot="on" class="mdi mdi-eye-outline"></span>
+				<span slot="off" class="mdi mdi-eye-off-outline"></span>
+			</uny-input>
+			<div>
+				<p>Whidth icons :</p>
+				<uny-input type="text" disabled>
+					<span slot="start" class="mdi mdi-account-circle-outline"></span>
+					<span slot="end" class="mdi mdi-account-circle-outline"></span>
+				</uny-input>
+			</div>
+		</div>
+		<br />
+		<script>
+			const eventInput = document.getElementById('input1');
+			eventInput.addEventListener('onchange', (e) => {
+				console.log('event onchange......', e);
+			});
+		</script>
+	</body>
 </html>

@@ -1,10 +1,6 @@
-/node_modules
-/index.html
-/site
-/**/*.test.js
-/**/*.spec.js
-/vite.config.js
+# We ignore all files in the repo
+/*
 # We unignore the dist folder
 !/dist
 # We unignore the types folder
-/types
+!/types

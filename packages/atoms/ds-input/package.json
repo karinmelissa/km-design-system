@@ -1,75 +1,134 @@
 {
-  "name": "@uikit/ds-input",
+  "name": "@karinmelissa/ds-input",
   "description": "Input component",
   "version": "1.0.0",
   "scripts": {
     "start": "vite",
-    "build": "vite build",
-    "test": "wtr src/**/*.test.js --node-resolve",
-    "test:watch": "wtr src/**/*.test.js --node-resolve --watch",
-    "test:coverage": "wtr src/**/*.test.js  --node-resolve --coverage",
-    "exports": "exports \"src/**/*.{ts,tsx}\" --exports --types --main index --analyzer",
-    "prepublishOnly": "npm run test:coverage && npm run exports",
-    "build-wc": "vite build && npm run exports"
+    "build:types": "tsc -p tsconfig.build.json",
+    "build:compile": "library \"src/**/*\"",
+    "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
+    "build": "npm run build:types && npm run build:compile && npm run build:exports",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
   },
   "dependencies": {
-    "@atomico/hooks": "^3.13.1",
+    "@atomico/hooks": "^4.0.0",
     "atomico": "latest"
   },
   "devDependencies": {
-    "@atomico/exports": "^1.13.2",
+    "@atomico/exports": "^0.37.0",
     "@atomico/tsconfig": "^1.1.2",
     "@atomico/vite": "^2.7.0",
+    "@open-wc/testing": "^3.1.6",
     "@uppercod/vite-meta-url": "latest",
     "@uppercod/vite-meta-url-load-css": "latest",
+    "@vitest/coverage-istanbul": "^0.30.1",
+    "@vitest/ui": "^0.30.1",
     "csso": "latest",
+    "jsdom": "^21.1.1",
     "typescript": "^4.8.4",
-    "vite": "latest",
-    "vite-plugin-istanbul": "^3.0.1",
-    "vitest": "^3.1.4"
+    "vite": "^4.2.1",
+    "vite-plugin-istanbul": "^3.0.1"
   },
   "peerDependencies": {
-    "@atomico/react": "latest"
+    "@atomico/react": "*",
+    "@atomico/vue": "*"
   },
   "peerDependenciesMeta": {
     "@atomico/react": {
+      "optional": true
+    },
+    "@atomico/vue": {
       "optional": true
     }
   },
   "module": "./dist/index.js",
   "exports": {
-    ".": "./dist/index.js",
     "./index.react": "./dist/index.react.js",
     "./index.visibility": "./dist/index.visibility.css",
     "./index": "./dist/index.js",
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./lib/index.js"
+    },
     "./input": "./dist/input.js",
+    "./Input": "./dist/components/Input.js",
     "./index.preact": "./dist/index.preact.js",
-    "./react": "./dist/react.js",
-    "./preact": "./dist/preact.js",
-    "./Input": "./dist/components/Input.js"
+    "./preact": {
+      "types": "./wrapper/preact.d.ts",
+      "default": "./wrapper/preact.js"
+    },
+    "./react": {
+      "types": "./wrapper/react.d.ts",
+      "default": "./wrapper/react.js"
+    },
+    "./InputI": "./dist/components/InputI.js",
+    "./types": "./dist/components/types.js",
+    "./css/input.style": {
+      "types": "./types/css/input.style.d.ts",
+      "default": "./lib/css/input.style.js"
+    },
+    "./components/Input": {
+      "types": "./types/components/Input.d.ts",
+      "default": "./lib/components/Input.js"
+    },
+    "./components/Input.type": {
+      "types": "./types/components/Input.type.d.ts",
+      "default": "./lib/components/Input.type.js"
+    },
+    "./components/types": {
+      "types": "./types/components/types.d.ts",
+      "default": "./lib/components/types.js"
+    },
+    "./vue": {
+      "types": "./wrapper/vue.d.ts",
+      "default": "./wrapper/vue.js"
+    }
   },
   "typesVersions": {
     "*": {
       "index.react": [
         "./types/index.react.d.ts"
       ],
+      "Input": [
+        "./types/components/Input.d.ts"
+      ],
       "index": [
         "./types/index.d.ts"
-      ],
-      "input": [
-        "./types/input.d.ts"
       ],
       "index.preact": [
         "./types/index.preact.d.ts"
       ],
       "react": [
-        "./types/react.d.ts"
+        "wrapper/react.d.ts"
       ],
       "preact": [
-        "./types/preact.d.ts"
+        "wrapper/preact.d.ts"
       ],
-      "Input": [
-        "./types/components/Input.d.ts"
+      "InputI": [
+        "./types/components/InputI.d.ts"
+      ],
+      "types": [
+        "./types/components/types.d.ts"
+      ],
+      "components/Input": [
+        "types/components/Input.d.ts"
+      ],
+      "components/Input.spec": [
+        "types/components/Input.spec.d.ts"
+      ],
+      "components/Input.type": [
+        "types/components/Input.type.d.ts"
+      ],
+      "components/types": [
+        "types/components/types.d.ts"
+      ],
+      "css/input.style": [
+        "types/css/input.style.d.ts"
+      ],
+      "vue": [
+        "wrapper/vue.d.ts"
       ]
     }
   },

@@ -1,5 +1,8 @@
 {
   "name": "ui-kit",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "workspaces": [
     "packages/**"
   ],
