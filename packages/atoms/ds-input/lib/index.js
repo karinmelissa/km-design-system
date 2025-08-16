@@ -1,5 +1,5 @@
 import { Input } from './components/Input.js';
 
-customElements.define("uny-input", Input);
+customElements.define("ds-input", Input);
 
 export { Input };
