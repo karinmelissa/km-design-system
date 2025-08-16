@@ -1,8 +1,6 @@
 {
   "name": "ui-kit",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
+  "private": true,
   "workspaces": [
     "packages/atoms/*",
     "packages/molecules/*",
