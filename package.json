@@ -4,6 +4,10 @@
     "registry": "https://npm.pkg.github.com/"
   },
   "workspaces": [
+    "packages/atoms/*",
+    "packages/molecules/*",
+    "packages/organisms/*",
+    "packages/ds-tokens",
     "packages/**"
   ],
   "scripts": {
