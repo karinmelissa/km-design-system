@@ -1,0 +1,181 @@
+{
+  "version": 1,
+  "tags": [
+    {
+      "name": "uny-button",
+      "description": "Elemento html cliqueable que puede ser utilizado en formularios o en cualquier parte de la página que necesite un botón estándar y simple de aplicar.",
+      "properties": [
+        {
+          "name": "color",
+          "description": "Define el color que tendrá el botón. <br/> <strong> Opciones: 'primary', 'secondary', 'ternary', 'success', 'warning', 'danger'</strong>",
+          "type": "string",
+          "default": false,
+          "required": false
+        },
+        {
+          "name": "disabled",
+          "description": "Si es verdadero, el botón estará deshabilitado",
+          "type": "boolean",
+          "default": false,
+          "required": false
+        },
+        {
+          "name": "variant",
+          "description": "Define el tipo de relleno que tendrá el botón. <br/><strong>Opciones: 'fill', 'outlined', 'text'</strong>",
+          "type": "string",
+          "default": "fill",
+          "required": false
+        },
+        {
+          "name": "expand",
+          "description": "Define el comportamiento del botón en su contenedor. <br/><strong>Opciones: 'block', 'full' </strong>",
+          "type": "string",
+          "default": "block",
+          "required": false
+        },
+        {
+          "name": "aria-label",
+          "description": "A11y: Texto complementario para lectores de pantalla. Toma por defecto el mismo valor del label <br/><strong>Obligatorio si el botón NO tiene label</strong>",
+          "type": "string",
+          "default": "-- mismo texto que el label de tener -- ",
+          "required": true
+        },
+        {
+          "name": "name",
+          "description": "A11y: Texto para parámetro name. Toma por defecto el mismo valor del label <br/><strong>Obligatorio si el botón NO tiene label</strong>",
+          "type": "string",
+          "default": "-- mismo texto que el label de tener -- ",
+          "required": true
+        }
+      ],
+      "events": [],
+      "cssProperties": [
+        {
+          "name": "--uny-chips-${color}",
+          "description": "Reestablecer el color background del botón ${color}"
+        },
+        {
+          "name": "--uny-chips-${color}-contrast",
+          "description": "Reestablecer el color del texto ${color}"
+        },
+        {
+          "name": "--uny-chips-${color}-hover-background",
+          "description": "Reestablecer el background del botón ${color} en hover "
+        },
+        {
+          "name": "--uny-chips-${color}-activated-background",
+          "description": "Reestablecer el background del botón ${color} en activated "
+        },
+        {
+          "name": "--uny-chips-${color}-disabled",
+          "description": "Reestablecer el background del botón ${color} cuando está deshabilitado "
+        },
+        {
+          "name": "--uny-chips-${color}-disabled-text",
+          "name": "--uny-button-${color}",
+          "description": "Reestablecer el color background del botón ${color}"
+        },
+        {
+          "name": "--uny-button-${color}-contrast",
+          "description": "Reestablecer el color del texto ${color}"
+        },
+        {
+          "name": "--uny-button-${color}-hover-background",
+          "description": "Reestablecer el background del botón ${color} en hover "
+        },
+        {
+          "name": "--uny-button-${color}-activated-background",
+          "description": "Reestablecer el background del botón ${color} en activated "
+        },
+        {
+          "name": "--uny-button-${color}-disabled",
+          "description": "Reestablecer el background del botón ${color} cuando está deshabilitado "
+        },
+        {
+          "name": "--uny-button-${color}-disabled-text",
+          "description": "Reestablecer el color del texto del botón ${color} al estar desactivado "
+        },
+        {
+          "name": "--border-color",
+          "description": "Color del borde del botón"
+        },
+        {
+          "name": "--border-style",
+          "description": "Estilo del borde del botón"
+        },
+        {
+          "name": "--border-width",
+          "description": "Ancho del borde del botón"
+        },
+        {
+          "name": "--background",
+          "description": "Color del background del botón "
+        },
+        {
+          "name": "--background-hover",
+          "description": "Color del background del botón cuando está en hover"
+        },
+        {
+          "name": "--background-activated",
+          "description": "Color del background del botón cuando está siendo está siendo presionado"
+        },
+        {
+          "name": "--background-focused",
+          "description": "Color del background del botón cuando está en foco con tab"
+        },
+        {
+          "name": "--background-disabled",
+          "description": "Color del background del botón cuando el atributo disabled es verdadero"
+        },
+        {
+          "name": "--color",
+          "description": "Color del texto del botón"
+        },
+        {
+          "name": "--color-activated",
+          "description": "Color del texto del botón cuando fue presionado"
+        },
+        {
+          "name": "--color-focused",
+          "description": "Color del texto del botón cuando está en foco por tab"
+        },
+        {
+          "name": "--color-hover",
+          "description": "Color del texto del botón en hover"
+        },
+        {
+          "name": "--color-disabled",
+          "description": "Color del texto cuando el atributo disabled es verdedero"
+        },
+        {
+          "name": "--box-shadow",
+          "description": "Sombra del botón"
+        },
+        {
+          "name": "--border-radius",
+          "description": "Redondeo del borde del botón"
+        },
+        {
+          "name": "--padding-top",
+          "description": "Padding top"
+        },
+        {
+          "name": "--padding-bottom",
+          "description": "Padding bottom"
+        },
+        {
+          "name": "--padding-left",
+          "description": "Padding left"
+        },
+        {
+          "name": "--padding-right",
+          "description": "Padding right"
+        },
+        {
+          "name": "--min-height",
+          "description": "Alto mínimo"
+        }
+      ]
+    }
+  ]
+}
