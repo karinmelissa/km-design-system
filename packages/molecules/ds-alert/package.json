@@ -1,0 +1,125 @@
+{
+  "name": "@uikit/ds-alert",
+  "description": "Alert component",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vite",
+    "build:types": "tsc -p tsconfig.build.json",
+    "build:compile": "library \"src/**/*\"",
+    "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
+    "build": "npm run build:types && npm run build:compile && npm run build:exports",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run test:coverage && npm run exports"
+  },
+  "dependencies": {
+    "@atomico/hooks": "^4.0.0",
+    "atomico": "latest"
+  },
+  "devDependencies": {
+    "@atomico/exports": "^1.13.2",
+    "@atomico/tsconfig": "^1.1.2",
+    "@atomico/vite": "^2.7.0",
+    "@open-wc/testing": "^3.1.6",
+    "@uppercod/vite-meta-url": "latest",
+    "@uppercod/vite-meta-url-load-css": "latest",
+    "@vitest/coverage-istanbul": "^0.30.1",
+    "@vitest/ui": "^0.30.1",
+    "csso": "latest",
+    "jsdom": "^21.1.1",
+    "typescript": "^4.8.4",
+    "vite": "^4.2.1",
+    "vite-plugin-istanbul": "^3.0.1"
+  },
+  "peerDependencies": {
+    "@atomico/react": "*",
+    "@atomico/vue": "*"
+  },
+  "peerDependenciesMeta": {
+    "@atomico/react": {
+      "optional": true
+    },
+    "@atomico/vue": {
+      "optional": true
+    }
+  },
+  "module": "./dist/index.js",
+  "exports": {
+    "./index.react": "./dist/index.react.js",
+    "./index.visibility": "./dist/index.visibility.css",
+    "./index": "./dist/index.js",
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./alert": "./dist/alert.js",
+    "./Alert": "./dist/components/Alert.js",
+    "./index.preact": "./dist/index.preact.js",
+    "./preact": {
+      "types": "./wrapper/preact.d.ts",
+      "default": "./wrapper/preact.js"
+    },
+    "./react": {
+      "types": "./wrapper/react.d.ts",
+      "default": "./wrapper/react.js"
+    },
+    "./components/Alert": {
+      "types": "./types/components/Alert.d.ts",
+      "default": "./lib/components/Alert.js"
+    },
+    "./components/Alert.type": {
+      "types": "./types/components/Alert.type.d.ts",
+      "default": "./lib/components/Alert.type.js"
+    },
+    "./css/alert.style": {
+      "types": "./types/css/alert.style.d.ts",
+      "default": "./lib/css/alert.style.js"
+    },
+    "./vue": {
+      "types": "./wrapper/vue.d.ts",
+      "default": "./wrapper/vue.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "index.react": [
+        "./types/index.react.d.ts"
+      ],
+      "Button": [
+        "./types/components/Button.d.ts"
+      ],
+      "index": [
+        "./types/index.d.ts"
+      ],
+      "index.preact": [
+        "./types/index.preact.d.ts"
+      ],
+      "react": [
+        "wrapper/react.d.ts"
+      ],
+      "preact": [
+        "wrapper/preact.d.ts"
+      ],
+      "Alert": [
+        "./types/components/Alert.d.ts"
+      ],
+      "components/Alert": [
+        "types/components/Alert.d.ts"
+      ],
+      "components/Alert.spec": [
+        "types/components/Alert.spec.d.ts"
+      ],
+      "components/Alert.type": [
+        "types/components/Alert.type.d.ts"
+      ],
+      "css/alert.style": [
+        "types/css/alert.style.d.ts"
+      ],
+      "vue": [
+        "wrapper/vue.d.ts"
+      ]
+    }
+  },
+  "types": "types/index.d.ts"
+}

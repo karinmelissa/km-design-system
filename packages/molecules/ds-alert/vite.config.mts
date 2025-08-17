@@ -1,7 +1,7 @@
-import { resolve } from "path";
-import atomico from "@atomico/vite";
-import { defineConfig } from "vite";
-import istanbul from "vite-plugin-istanbul";
+import { resolve } from "path"
+import atomico from "@atomico/vite"
+import { defineConfig } from "vite"
+import istanbul from "vite-plugin-istanbul"
 
 export default defineConfig({
   build: {
@@ -10,7 +10,7 @@ export default defineConfig({
     minify: true,
     lib: {
       entry: resolve(__dirname, "src/index.tsx"),
-      name: "ds-chip",
+      name: "ds-alert",
       fileName: "index",
     },
   },
@@ -32,10 +32,10 @@ export default defineConfig({
     deps: {
       registerNodeLoader: true,
     },
-    reporters: ["verbose", "junit"],
+    reporters: ['verbose','junit'],
     coverage: {
       provider: "istanbul",
-      reportsDirectory: "../../tests/ds-chip/coverage",
+      reportsDirectory: '../../tests/ds-alert/coverage'
     },
   },
-});
+})

@@ -37,7 +37,7 @@ export const chipStyle = css`
 
 	/* Caption/Semibold */
 
-	.uny-chip-wrapper {
+	.ds-chip-wrapper {
 		display: inline-flex;
 		padding: 4px 8px;
 		justify-content: center;
@@ -50,7 +50,7 @@ export const chipStyle = css`
 		border-radius: var(--ds-globals-border-radius-250, 20px);
 		background: var(--ds-chips-background);
 	}
-	.uny-chip-x-button {
+	.ds-chip-x-button {
 		/* Reset de márgenes y relleno */
 		margin: 0;
 		padding: 0;
@@ -68,8 +68,8 @@ export const chipStyle = css`
 		justify-content: center;
 		align-items: center;
 	}
-	.uny-chip-x-button > span,
-	.uny-chip-x-button > svg {
+	.ds-chip-x-button > span,
+	.ds-chip-x-button > svg {
 		color: var(--ds-chips-skip-color);
 		fill: var(--ds-chips-skip-color);
 		font-size: 1rem;
@@ -80,7 +80,7 @@ export const chipStyle = css`
 		flex-direction: row;
 	}
 	::slotted(*),
-	.uny-chip-slot-label {
+	.ds-chip-slot-label {
 		color: var(--ds-chips-label-color);
 		/* Caption/Semibold */
 		pointer-events: none;
@@ -110,56 +110,56 @@ export const chipStyle = css`
 		fill: var(--ds-chips-icon-color) !important;
 	}
 	/* selected */
-	.uny-chip-wrapper.selected {
+	.ds-chip-wrapper.selected {
 		background: var(--ds-chips-background-selected);
 	}
-	.uny-chip-wrapper.selected ::slotted(*),
-	.uny-chip-wrapper.selected .uny-chip-slot-label {
+	.ds-chip-wrapper.selected ::slotted(*),
+	.ds-chip-wrapper.selected .ds-chip-slot-label {
 		color: var(--ds-chips-label-color-selected);
 	}
-	.uny-chip-wrapper.selected ::slotted([slot='icon']) {
+	.ds-chip-wrapper.selected ::slotted([slot='icon']) {
 		color: var(--ds-chips-icon-color-selected) !important;
 		fill: var(--ds-chips-icon-color-selected) !important;
 	}
-	.uny-chip-wrapper.selected .uny-chip-x-button > span {
+	.ds-chip-wrapper.selected .ds-chip-x-button > span {
 		color: var(--ds-chips-skip-color-selected);
 	}
 	/* hover */
-	.uny-chip-wrapper:hover {
+	.ds-chip-wrapper:hover {
 		background: var(--ds-chips-background-hover);
 	}
 
-	.uny-chip-wrapper:hover ::slotted(*),
-	.uny-chip-wrapper:hover .uny-chip-slot-label {
+	.ds-chip-wrapper:hover ::slotted(*),
+	.ds-chip-wrapper:hover .ds-chip-slot-label {
 		color: var(--ds-chips-label-color-hover);
 	}
-	.uny-chip-wrapper:hover ::slotted([slot='icon']) {
+	.ds-chip-wrapper:hover ::slotted([slot='icon']) {
 		color: var(--ds-chips-icon-color-hover) !important;
 		fill: var(--ds-chips-icon-color-hover) !important;
 	}
-	.uny-chip-wrapper:hover .uny-chip-x-button > svg {
+	.ds-chip-wrapper:hover .ds-chip-x-button > svg {
     color: var(--ds-chips-skip-color-hover);
 }
 	/* pressed  */
-	.uny-chip-wrapper:active {
+	.ds-chip-wrapper:active {
 		background: var(--ds-chips-background-pressed);
 	}
-	.uny-chip-wrapper:active ::slotted(*),
-	.uny-chip-wrapper:active .uny-chip-slot-label {
+	.ds-chip-wrapper:active ::slotted(*),
+	.ds-chip-wrapper:active .ds-chip-slot-label {
 		color: var(--ds-chips-label-color-pressed);
 	}
-	.uny-chip-wrapper:active ::slotted([slot='icon']) {
+	.ds-chip-wrapper:active ::slotted([slot='icon']) {
 		color: var(--ds-chips-icon-color-pressed) !important;
 		fill: var(--ds-chips-icon-color-pressed) !important;
 	}
-	.uny-chip-wrapper:active .uny-chip-x-button > span {
+	.ds-chip-wrapper:active .ds-chip-x-button > span {
 		color: var(--ds-chips-skip-color-pressed);
 		fill: var(--ds-chips-skip-color-pressed);
 	}
 
 	/* focused */
-	.uny-chip-wrapper:target,
-	.uny-chip-wrapper:focus-visible {
+	.ds-chip-wrapper:target,
+	.ds-chip-wrapper:focus-visible {
 		border-radius: 20px;
 		outline: 4px solid var(--ds-chips-border-primary-focused);
 		border: none;
@@ -169,21 +169,21 @@ export const chipStyle = css`
 	:host([disabled]) {
 		cursor: not-allowed;
 	}
-	.uny-chip-wrapper.disabled {
+	.ds-chip-wrapper.disabled {
 		pointer-events: none;
 		background: var(--ds-chips-background-disabled);
 		cursor: not-allowed;
 	}
-	.uny-chip-wrapper.disabled ::slotted(*),
-	.uny-chip-wrapper:disabled .uny-chip-slot-label {
+	.ds-chip-wrapper.disabled ::slotted(*),
+	.ds-chip-wrapper:disabled .ds-chip-slot-label {
 		color: var(--ds-chips-label-color-disabled);
 	}
-	.uny-chip-wrapper.disabled ::slotted([slot='icon']) {
+	.ds-chip-wrapper.disabled ::slotted([slot='icon']) {
 		color: var(--ds-chips-icon-color-disabled) !important;
 		fill: var(--ds-chips-icon-color-disabled) !important;
 	}
 
-	.uny-chip-wrapper.disabled .uny-chip-x-button  > svg {
+	.ds-chip-wrapper.disabled .ds-chip-x-button  > svg {
     color: var(--ds-chips-skip-color-disabled);
 }
 `;

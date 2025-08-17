@@ -5,7 +5,7 @@
 // import { fixture } from 'atomico/test-dom';
 // import { Chip } from '../index';
 
-// describe('Test uny-chip ', () => {
+// describe('Test ds-chip ', () => {
 // 	it('El elemento se renderiza correctamente y Las propiedades por defecto concuerdan con lo esperado', async () => {
 // 		const component = fixture(html`<${Chip}> <span>label</span> </${Chip}>`);
 // 		await component.mounted;
@@ -14,7 +14,7 @@
 // 		expect(component).to.have.property('ariaLabel').to.be.equal('chip');
 // 		expect(component).to.have.property('disabled').to.be.equal(false);
 // 	});
-// 	it('El elemento uny-chip se actualiza al cambiar la prop disabled ', async () => {
+// 	it('El elemento ds-chip se actualiza al cambiar la prop disabled ', async () => {
 // 		let disabled = false;
 // 		let component = await fixture(html`<${Chip} disabled="${disabled}">
 //       <span>label</span>
@@ -29,7 +29,7 @@
 // 		expect(component).to.have.property('disabled').to.be.equal(true);
 // 	});
 // 	//
-// 	it('El elemento uny-chip se actualiza al cambiar la prop selected ', async () => {
+// 	it('El elemento ds-chip se actualiza al cambiar la prop selected ', async () => {
 // 		let selected = false;
 // 		let component = await fixture(html`<${Chip} selected="${selected}">
 //       <span>label</span>
@@ -44,7 +44,7 @@
 // 		expect(component).to.have.property('selected').to.be.equal(true);
 // 	});
 // 	//
-// 	it('El elemento uny-chip se actualiza al cambiar la prop ariaLabel ', async () => {
+// 	it('El elemento ds-chip se actualiza al cambiar la prop ariaLabel ', async () => {
 // 		let ariaLabel = 'aria-label';
 // 		let component = await fixture(html`<${Chip} aria-label="${ariaLabel}">
 //       <span>label</span>
@@ -58,7 +58,7 @@
 // 		await component.updated;
 // 		expect(component.ariaLabel).to.be.equal(ariaLabel);
 // 	});
-// 	it(" el evento custom 'ClickChip' EXISTE en uny-chip  ", async () => {
+// 	it(" el evento custom 'ClickChip' EXISTE en ds-chip  ", async () => {
 // 		let component = await fixture(html`<${Chip} id="chipTest1">
 //       <span>label</span>
 //     </${Chip}>`);
@@ -69,7 +69,7 @@
 // 		await component.updated;
 // 		expect(component).to.have.property('selected').to.equal(true);
 // 	});
-// 	it("Al ser click en el elemento uny-chip el evento custom 'ClickChip' es disparado y la propiedad selected cambia true/false", async () => {
+// 	it("Al ser click en el elemento ds-chip el evento custom 'ClickChip' es disparado y la propiedad selected cambia true/false", async () => {
 // 		let component = fixture(html`<${Chip} id="chipTest1">
 //       <span>label</span>
 //     </${Chip}>`);
@@ -83,12 +83,12 @@
 // 		expect(component).to.have.property('selected').to.equal(true);
 // 	});
 // 	//
-// 	it('El elemento button en uny-chip no se visualiza (display:none) si el estado selected es false', async () => {
+// 	it('El elemento button en ds-chip no se visualiza (display:none) si el estado selected es false', async () => {
 // 		let component = fixture(html`<${Chip} selected='${true}'>
 //     <span>label</span>
 //   </${Chip}>`);
 // 		await component.mounted;
-// 		let xButton = component.shadowRoot.querySelector('.uny-chip-x-button');
+// 		let xButton = component.shadowRoot.querySelector('.ds-chip-x-button');
 // 		expect(xButton).to.exist;
 // 		expect(getComputedStyle(xButton).display).toBe('flex');
 // 		component = fixture(html`<${Chip} selected='${false}'>

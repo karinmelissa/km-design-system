@@ -18,7 +18,7 @@ Los chip son elementos interactivos que permiten al usuario seleccionar y desele
 ## Instalación
 
 ```
-npm install @unity/uny-chip
+npm install @uikit/ds-chip
 ```
 
 ## Overview
@@ -290,23 +290,23 @@ npm install @unity/uny-chip
 
 ```
 
-import "@unity/uny-chip"
+import "@uikit/ds-chip"
 ```
 
 ```html
-<uny-chip selected="true" disabled="false" globals="false">
+<ds-chip selected="true" disabled="false" globals="false">
   <span> Chip Text</span>
-</uny-chip>
+</ds-chip>
 ```
 
 ### Angular
 
-Ejemplo de un componente de angular basado en @unity/uny-chip
+Ejemplo de un componente de angular basado en @uikit/ds-chip
 
 #### chip.component.html
 
 ```html
-<uny-chip
+<ds-chip
   [id]="id"
   [selected]="selected"
   [globals]="globals"
@@ -316,14 +316,14 @@ Ejemplo de un componente de angular basado en @unity/uny-chip
   (click)="handleClick($event)">
   <ng-content icon></ng-content>
   <ng-content></ng-content>
-</uny-chip>
+</ds-chip>
 ```
 
 #### chip.component.ts
 
 ```ts
 import { Component, EventEmitter, Input, OnInit, Output } from "@angular/core";
-import "@unity/uny-chip";
+import "@uikit/ds-chip";
 @Component({
   selector: "app-chip",
   templateUrl: "./chip.component.html",

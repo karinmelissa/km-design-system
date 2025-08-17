@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta slot="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Unity Accordion Component</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css">
+	<script type="module" src="./src/index.tsx"></script>
+		<!--Se puede importar una hoja de estilos distinta para cambiar la paleta-->
+	<script type="module">
+		import "@uikit/ds-tokens/theme1Css";
+		import "@uikit/ds-button";
+	</script>
+</head>
+
+<body>
+	 <div style="width: 50%;"> 
+		<h1>Alerts widthout content</h1>
+		<ds-alert type="success" title="Alert Success" show="true" close-button="true"></ds-alert>
+		<ds-alert type="error" title="Alert error" show="true"></ds-alert>
+		<ds-alert type="info" title="Alert info" show="true"></ds-alert>
+		<ds-alert type="warning" title="Alert warning" show="true"></ds-alert>
+		<h1>Alerts width content text</h1>
+		<ds-alert type="success" title="Alert Success">
+			<div slot="content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis nihil omnis unde tempore iusto eos quos ipsam adipisci eaque laudantium veniam assumenda autem, laborum esse eum, eius nostrum corrupti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nostrum repudiandae quam consectetur deserunt, consequatur exercitationem blanditiis est sequi molestiae quis rem, ut quas fugiat omnis illo a aut dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit natus nulla magni ipsa, ad omnis commodi accusamus. Accusantium dicta distinctio nobis ullam repellendus neque illum dolor soluta quibusdam quas!
+			</div>
+		</ds-alert>
+		<ds-alert type="error" title="Alert error" show="true" close-button="true">
+			<div slot="content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis nihil omnis unde tempore iusto eos quos ipsam adipisci eaque laudantium veniam assumenda autem, laborum esse eum, eius nostrum corrupti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nostrum repudiandae quam consectetur deserunt, consequatur exercitationem blanditiis est sequi molestiae quis rem, ut quas fugiat omnis illo a aut dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit natus nulla magni ipsa, ad omnis commodi accusamus. Accusantium dicta distinctio nobis ullam repellendus neque illum dolor soluta quibusdam quas!
+			</div>
+		</ds-alert>
+		<ds-alert type="info" title="Alert info" show="true">
+			<div slot="content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis nihil omnis unde tempore iusto eos quos ipsam adipisci eaque laudantium veniam assumenda autem, laborum esse eum, eius nostrum corrupti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nostrum repudiandae quam consectetur deserunt, consequatur exercitationem blanditiis est sequi molestiae quis rem, ut quas fugiat omnis illo a aut dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit natus nulla magni ipsa, ad omnis commodi accusamus. Accusantium dicta distinctio nobis ullam repellendus neque illum dolor soluta quibusdam quas!
+			</div>
+		</ds-alert>
+		<ds-alert type="warning" title="Alert warning" show="true">
+			<div slot="content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis nihil omnis unde tempore iusto eos quos ipsam adipisci eaque laudantium veniam assumenda autem, laborum esse eum, eius nostrum corrupti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nostrum repudiandae quam consectetur deserunt, consequatur exercitationem blanditiis est sequi molestiae quis rem, ut quas fugiat omnis illo a aut dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit natus nulla magni ipsa, ad omnis commodi accusamus. Accusantium dicta distinctio nobis ullam repellendus neque illum dolor soluta quibusdam quas!
+			</div>
+		</ds-alert>
+		<h1>Alerts width content text and two buttons</h1>
+		<ds-alert type="success" title="Alert Success" show="true">
+			<div slot="content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis nihil omnis unde tempore iusto eos quos ipsam adipisci eaque laudantium veniam assumenda autem, laborum esse eum, eius nostrum corrupti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nostrum repudiandae quam consectetur deserunt, consequatur exercitationem blanditiis est sequi molestiae quis rem, ut quas fugiat omnis illo a aut dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit natus nulla magni ipsa, ad omnis commodi accusamus. Accusantium dicta distinctio nobis ullam repellendus neque illum dolor soluta quibusdam quas!
+			</div>
+			<div slot="content-button">	
+		     <ds-button  variant="secondary" size="sm">Botón 2</ds-button>
+			 <ds-button  variant="primary" size="sm">Botón 1</ds-button>
+			</div>
+		</ds-alert>
+		<ds-alert type="error" title="Alert error" show="true">
+			<div slot="content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis nihil omnis unde tempore iusto eos quos ipsam adipisci eaque laudantium veniam assumenda autem, laborum esse eum, eius nostrum corrupti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nostrum repudiandae quam consectetur deserunt, consequatur exercitationem blanditiis est sequi molestiae quis rem, ut quas fugiat omnis illo a aut dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit natus nulla magni ipsa, ad omnis commodi accusamus. Accusantium dicta distinctio nobis ullam repellendus neque illum dolor soluta quibusdam quas!
+			</div>
+			<div slot="content-button">	
+				<ds-button   variant="secondary" size="sm">Botón 2</ds-button>
+				<ds-button   variant="primary" size="sm">Botón 1</ds-button>
+			   </div>
+		</ds-alert>
+		<ds-alert type="info" title="Alert info" show="true">
+			<div slot="content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis nihil omnis unde tempore iusto eos quos ipsam adipisci eaque laudantium veniam assumenda autem, laborum esse eum, eius nostrum corrupti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nostrum repudiandae quam consectetur deserunt, consequatur exercitationem blanditiis est sequi molestiae quis rem, ut quas fugiat omnis illo a aut dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit natus nulla magni ipsa, ad omnis commodi accusamus. Accusantium dicta distinctio nobis ullam repellendus neque illum dolor soluta quibusdam quas!
+			</div>
+			<div slot="content-button">	
+				<ds-button  variant="secondary" size="sm">Botón 2</ds-button>
+				<ds-button  variant="primary" size="sm">Botón 1</ds-button>
+			   </div>
+		</ds-alert>
+		<ds-alert type="warning" title="Alert warning" show="true">
+			<div slot="content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis nihil omnis unde tempore iusto eos quos ipsam adipisci eaque laudantium veniam assumenda autem, laborum esse eum, eius nostrum corrupti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nostrum repudiandae quam consectetur deserunt, consequatur exercitationem blanditiis est sequi molestiae quis rem, ut quas fugiat omnis illo a aut dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit natus nulla magni ipsa, ad omnis commodi accusamus. Accusantium dicta distinctio nobis ullam repellendus neque illum dolor soluta quibusdam quas!
+			</div>
+			<div slot="content-button">	
+				<ds-button variant="secondary" size="sm" behaviour="adaptable">Botón 2</ds-button>
+				<ds-button  variant="primary" size="sm" behaviour="adaptable">Botón 1</ds-button>
+			   </div>
+		</ds-alert>
+		<h1>Alerts width content text and all buttons</h1>
+		<ds-alert type="success" title="Alert Success" show="true">
+			<div slot="content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis nihil omnis unde tempore iusto eos quos ipsam adipisci eaque laudantium veniam assumenda autem, laborum esse eum, eius nostrum corrupti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nostrum repudiandae quam consectetur deserunt, consequatur exercitationem blanditiis est sequi molestiae quis rem, ut quas fugiat omnis illo a aut dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit natus nulla magni ipsa, ad omnis commodi accusamus. Accusantium dicta distinctio nobis ullam repellendus neque illum dolor soluta quibusdam quas!
+			</div>
+			<div slot="content-button">	
+		     <ds-button  variant="ghost"  globals="true" size="sm">Botón 3</ds-button>
+		     <ds-button   variant="secondary" size="sm">Botón 2</ds-button>
+			 <ds-button   variant="primary" size="sm">Botón 1</ds-button>
+			</div>
+		</ds-alert>
+		<ds-alert type="error" title="Alert error" show="true">
+			<div slot="content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis nihil omnis unde tempore iusto eos quos ipsam adipisci eaque laudantium veniam assumenda autem, laborum esse eum, eius nostrum corrupti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nostrum repudiandae quam consectetur deserunt, consequatur exercitationem blanditiis est sequi molestiae quis rem, ut quas fugiat omnis illo a aut dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit natus nulla magni ipsa, ad omnis commodi accusamus. Accusantium dicta distinctio nobis ullam repellendus neque illum dolor soluta quibusdam quas!
+			</div>
+			<div slot="content-button">	
+				<ds-button  variant="ghost"  globals="true" size="sm">Botón 3</ds-button>
+				<ds-button   variant="secondary" size="sm">Botón 2</ds-button>
+				<ds-button   variant="primary" size="sm">Botón 1</ds-button>
+			   </div>
+		</ds-alert>
+		<ds-alert type="info" title="Alert info" show="true">
+			<div slot="content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis nihil omnis unde tempore iusto eos quos ipsam adipisci eaque laudantium veniam assumenda autem, laborum esse eum, eius nostrum corrupti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nostrum repudiandae quam consectetur deserunt, consequatur exercitationem blanditiis est sequi molestiae quis rem, ut quas fugiat omnis illo a aut dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit natus nulla magni ipsa, ad omnis commodi accusamus. Accusantium dicta distinctio nobis ullam repellendus neque illum dolor soluta quibusdam quas!
+			</div>
+			<div slot="content-button">	
+				<ds-button  variant="ghost"  globals="true" size="sm">Botón 3</ds-button>
+				<ds-button   variant="secondary" size="sm">Botón 2</ds-button>
+				<ds-button   variant="primary" size="sm">Botón 1</ds-button>
+			   </div>
+		</ds-alert>
+		<ds-alert type="warning" title="Alert warning" show="true">
+			<div slot="content">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt reiciendis nihil omnis unde tempore iusto eos quos ipsam adipisci eaque laudantium veniam assumenda autem, laborum esse eum, eius nostrum corrupti. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias nostrum repudiandae quam consectetur deserunt, consequatur exercitationem blanditiis est sequi molestiae quis rem, ut quas fugiat omnis illo a aut dolorem. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius suscipit natus nulla magni ipsa, ad omnis commodi accusamus. Accusantium dicta distinctio nobis ullam repellendus neque illum dolor soluta quibusdam quas!
+			</div>
+			<div slot="content-button">	
+				<ds-button  variant="ghost"  globals="true" size="sm">Botón 3</ds-button>
+				<ds-button   variant="secondary" size="sm">Botón 2</ds-button>
+				<ds-button   variant="primary" size="sm">Botón 1</ds-button>
+			   </div>
+		</ds-alert>	
+	</div>
+	<script>
+</script>
+		
+</body>
+</html>

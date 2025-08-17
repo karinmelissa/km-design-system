@@ -28,7 +28,7 @@ function ChipComponent({
 		<host shadowDom>
 			<div
 				className={
-					'uny-chip-wrapper' +
+					'ds-chip-wrapper' +
 					(!disabled && selected ? ' selected' : '') +
 					(disabled ? ' disabled' : '')
 				}
@@ -40,12 +40,12 @@ function ChipComponent({
 			>
 				<slot
 					ref={refSlotIcon}
-					className="uny-chip-slot-icon"
+					className="ds-chip-slot-icon"
 					name="icon"
 				></slot>
-				<slot ref={refSlotContent} className="uny-chip-slot-label"></slot>
+				<slot ref={refSlotContent} className="ds-chip-slot-label"></slot>
 				<div
-					className="uny-chip-x-button"
+					className="ds-chip-x-button"
 					style={{ display: selected ? 'flex' : 'none' }}
 					aria-label={(selected ? 'Close' : 'Open') + ' ' + ariaLabel}
 					type="button"
