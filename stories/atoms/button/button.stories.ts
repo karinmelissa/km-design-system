@@ -31,7 +31,7 @@ const { args, argTypes } = define(Button, {
 })
 
 export default {
-  title: "Atomos/Button",
+  title: "Atoms/Button",
   component: "Button",
   args,
   argTypes,

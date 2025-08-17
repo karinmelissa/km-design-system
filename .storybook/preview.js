@@ -42,7 +42,7 @@ const preview= {
     options: {
       storySort: {
         method: "alphabetical",
-        order: ["Introduction", "Tokens", "Atomos", "Moleculas","Organismos"],
+        order: ["Introduction", "Tokens", "Atoms", "Molecules","Organisms"],
       },
     },
     cssVariables: {

@@ -19,7 +19,7 @@ const { args, argTypes } = define(Modal, {
 })
 
 export default {
-  title: "Componentes/Modal",
+  title: "Molecules/Modal",
   component: "Modal",
   args,
   argTypes,

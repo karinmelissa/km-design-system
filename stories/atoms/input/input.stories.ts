@@ -35,7 +35,7 @@ const { args, argTypes } = define(Input, {
 });
 
 export default {
-  title: "Atomos/Input",
+  title: "Atoms/Input",
   component: "Input",
   args,
   argTypes,
