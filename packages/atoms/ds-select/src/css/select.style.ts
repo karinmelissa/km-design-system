@@ -11,6 +11,7 @@ export const selectHostVartStyle = css`
 		align-content: flex-start;
 		text-align: left;
 		width: -webkit-fill-available;
+		min-width: 320px;
 		/* label */
 		--ds-select-label-color: var(--ds-globals-color-neutrals-70);
 		/* helper */
