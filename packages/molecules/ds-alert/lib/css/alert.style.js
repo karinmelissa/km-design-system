@@ -10,15 +10,15 @@ const customProperties = (type) => {
 
         /* Font family */
         --ds-alert--font-family: var(--ds-globals-font-family-primary);
-        --ds-alert--font-color:var(--ds-globals-color-neutral-200);
+        --ds-alert--font-color:var(--ds-globals-color-neutral-20);
 
        /*Border default*/
         --ds-alert--border-width: 0px;
 
       /*Body styles*/
-        --ds-alert--background-color:var(--ds-globals-color-${type}-500);
-        --ds-icon--start-color: var(--ds-globals-color-${type}-300);
-        --ds-icon--close-color: var(--ds-globals-color-neutral-200);
+        --ds-alert--background-color:var(--ds-globals-color-${type}-20);
+        --ds-icon--start-color: var(--ds-globals-color-${type}-30);
+        --ds-icon--close-color: var(--ds-globals-color-neutral-20);
 
         /*title font styles*/
         --ds-alert--title-font-size: var(--ds-globals-font-size-16,16px);
