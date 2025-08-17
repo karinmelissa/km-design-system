@@ -10,7 +10,7 @@ export default defineConfig({
     minify: true,
     lib: {
       entry: resolve(__dirname, "src/index.tsx"),
-      name: "uny-input",
+      name: "ds-input",
       fileName: "index",
     },
   },
@@ -35,7 +35,7 @@ export default defineConfig({
     reporters: ['verbose','junit'],
     coverage: {
       provider: "istanbul",
-      reportsDirectory: '../../tests/uny-input/coverage'
+      reportsDirectory: '../../tests/ds-input/coverage'
     },
   },
 })

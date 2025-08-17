@@ -1,0 +1,4 @@
+"use client";
+import { SelectOption as _SelectOption } from "@uikit/ds-select/components/SelectOption";
+import { auto } from "@atomico/react";
+export const SelectOption = auto(_SelectOption);

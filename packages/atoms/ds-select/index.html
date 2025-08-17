@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>WC</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://cdn.jsdelivr.net/npm/@mdi/font@7.4.47/css/materialdesignicons.min.css"
+			rel="stylesheet"
+		/>
+		<script type="module">
+			import "@uikit/ds-tokens/theme1Css";
+		</script>
+		<script type="module" src="./src/index.tsx"></script>
+	</head>
+	<body>
+		<div style="display: flex; height: 1800px; align-items: center">
+			<div
+				style="
+					position: relative;
+					gap: 16px;
+					display: flex;
+					flex-direction: column;
+					justify-content: flex-start;
+					align-items: flex-start;
+				"
+			>
+				<div style="width: 400px">
+					<h2>Default</h2>
+					<ds-select
+						options='[{"label": "Option 1", "value": "1"}, {"label": "Option @", "value": "2"},{"label": "Option 3", "value": "3"}, {"label": "Option 4", "value": "4"}, {"label": "Option 5", "value": "5"},{"label": "Option 6", "value": "6"}, {"label": "Option 7", "value": "7"}]'
+						id="checkbox02"
+						label="Text"
+					>
+					</ds-select>
+				</div>
+				<div style="width: 400px">
+					<h2>+ Helper text</h2>
+					<ds-select
+						options='[{"label": "Option 1", "value": "1"}, {"label": "Option @", "value": "2", "selected": true},{"label": "Option 3", "value": "3"}, {"label": "Option 4", "value": "4"}, {"label": "Option 5", "value": "5"}]'
+						id="checkbox01"
+						label="Label"
+						helper-text="Text message"
+						placeholder="Placeholder"
+					>
+					</ds-select>
+				</div>
+				<div style="width: 400px">
+					<h2>Is Filtereable</h2>
+					<ds-select
+						options='[{"label": "Option 1", "value": "1"}, {"label": "Option @", "value": "2"},{"label": "Option 3", "value": "3"}, {"label": "Option 4", "value": "4"}, {"label": "Option 5", "value": "5"},  {"label": "Option 6", "value": "6"} , {"label": "Option 7", "value": "7"}]'
+						id="checkbox011"
+				
+						value="4"
+						helper-text="Text message"
+						is-filterable
+						placeholder="Placeholder"
+					>
+					</ds-select>
+				</div>
+				<div style="width: 400px">
+					<h2>Is Filtereable + number</h2>
+					<ds-select
+						options='[{"label": "3", "value": "3"}, {"label": "13", "value": "4"},{"label": "33", "value": "33"}, {"label": "44", "value": "44"}]'
+						id="checkbox011"
+						variant="number"
+						value="4"
+						helper-text="Text message"
+						is-filterable
+						placeholder="Placeholder"
+					>
+					</ds-select>
+				</div>
+				<div style="width: 400px">
+					<h2>Error</h2>
+
+					<ds-select
+						options='[{"label": "Option 1", "value": "1"}, {"label": "Option @", "value": "2"},{"label": "Option 3", "value": "3"}, {"label": "Option 4", "value": "4"}, {"label": "Option 5", "value": "5"}]'
+						id="checkbox01"
+						label="Label"
+						helper-text="Text message"
+						placeholder="Placeholder"
+						error
+					>
+					</ds-select>
+				</div>
+				<div style="width: 400px">
+					<h2>Disabled</h2>
+					<ds-select
+						options='[{"label": "Option 1", "value": "1"}, {"label": "Option @", "value": "2"},{"label": "Option 3", "value": "3"}, {"label": "Option 4", "value": "4"}, {"label": "Option 5", "value": "5"}]'
+						id="checkbox01"
+						label="Label"
+						helper-text="Text message"
+						placeholder="Placeholder"
+						disabled
+					>
+					</ds-select>
+				</div>
+			</div>
+
+		
+			</div>
+		</div>
+	</body>
+	<script>
+		document.querySelector('#checkbox01').addEventListener('ClickChip', (e) => {
+			console.log(' on click evento ', e.target.checked);
+		});
+		setInterval(()=>{
+			document.querySelector('#checkbox011').label = null;
+
+		},200)
+		document
+			.querySelector('#checkbox01')
+			.addEventListener('ChangeCheckbox', (e) => {
+				console.log(' on onCheckboxChange evento ', e, e.target.checked);
+			});
+	</script>
+</html>

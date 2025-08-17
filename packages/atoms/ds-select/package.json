@@ -1,0 +1,174 @@
+{
+  "name": "@uikit/ds-select",
+  "description": "Select component",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "vite",
+    "build:types": "tsc -p tsconfig.build.json",
+    "build:compile": "library \"src/**/*\"",
+    "build:exports": "exports \"lib/**/*\" \"types/**/*\" --wrappers",
+    "build": "npm run build:types && npm run build:compile && npm run build:exports",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "@atomico/hooks": "^4.0.0",
+    "atomico": "latest"
+  },
+  "devDependencies": {
+    "@atomico/exports": "^0.37.0",
+    "@atomico/tsconfig": "^1.1.2",
+    "@atomico/vite": "^2.7.8",
+    "@open-wc/testing": "^3.1.6",
+    "@uppercod/vite-meta-url": "latest",
+    "@uppercod/vite-meta-url-load-css": "latest",
+    "@vitest/coverage-istanbul": "^0.30.1",
+    "@vitest/ui": "^0.30.1",
+    "csso": "latest",
+    "jsdom": "^21.1.1",
+    "typescript": "^4.8.4",
+    "vite": "^4.2.1",
+    "vite-plugin-istanbul": "^3.0.1"
+  },
+  "peerDependencies": {
+    "@atomico/react": "*",
+    "@atomico/vue": "*"
+  },
+  "peerDependenciesMeta": {
+    "@atomico/react": {
+      "optional": true
+    },
+    "@atomico/vue": {
+      "optional": true
+    }
+  },
+  "module": "./dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./lib/index.js"
+    },
+    "./index": "./dist/index.js",
+    "./select": "./dist/components/select.js",
+    "./index.preact": "./dist/index.preact.js",
+    "./index.react": "./dist/index.react.js",
+    "./react": {
+      "types": "./wrapper/react.d.ts",
+      "default": "./wrapper/react.js"
+    },
+    "./preact": {
+      "types": "./wrapper/preact.d.ts",
+      "default": "./wrapper/preact.js"
+    },
+    "./Select": "./dist/components/Select.js",
+    "./SelectOption": "./dist/components/SelectOption.js",
+    "./hooks": "./dist/components/hooks.js",
+    "./SelectOption/react": "./dist/SelectOption.react.js",
+    "./SelectOption/preact": "./dist/SelectOption.preact.js",
+    "./components/hooks": {
+      "types": "./types/components/hooks.d.ts",
+      "default": "./lib/components/hooks.js"
+    },
+    "./components/Select": {
+      "types": "./types/components/Select.d.ts",
+      "default": "./lib/components/Select.js"
+    },
+    "./components/Select.type": {
+      "types": "./types/components/Select.type.d.ts",
+      "default": "./lib/components/Select.type.js"
+    },
+    "./components/SelectOption": {
+      "types": "./types/components/SelectOption.d.ts",
+      "default": "./lib/components/SelectOption.js"
+    },
+    "./css/select.style": {
+      "types": "./types/css/select.style.d.ts",
+      "default": "./lib/css/select.style.js"
+    },
+    "./vue": {
+      "types": "./wrapper/vue.d.ts",
+      "default": "./wrapper/vue.js"
+    },
+    "./components/SelectOption/react": {
+      "types": "./wrapper/components/SelectOption/react.d.ts",
+      "default": "./wrapper/components/SelectOption/react.js"
+    },
+    "./components/SelectOption/preact": {
+      "types": "./wrapper/components/SelectOption/preact.d.ts",
+      "default": "./wrapper/components/SelectOption/preact.js"
+    },
+    "./components/SelectOption/vue": {
+      "types": "./wrapper/components/SelectOption/vue.d.ts",
+      "default": "./wrapper/components/SelectOption/vue.js"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "select": [
+        "./types/components/select.d.ts"
+      ],
+      "index": [
+        "./types/index.d.ts"
+      ],
+      "index.react": [
+        "./types/index.react.d.ts"
+      ],
+      "index.preact": [
+        "./types/index.preact.d.ts"
+      ],
+      "react": [
+        "wrapper/react.d.ts"
+      ],
+      "preact": [
+        "wrapper/preact.d.ts"
+      ],
+      "Select": [
+        "./types/components/Select.d.ts"
+      ],
+      "SelectOption": [
+        "./types/components/SelectOption.d.ts"
+      ],
+      "hooks": [
+        "./types/components/hooks.d.ts"
+      ],
+      "SelectOption/react": [
+        "./types/SelectOption.react.d.ts"
+      ],
+      "SelectOption/preact": [
+        "./types/SelectOption.preact.d.ts"
+      ],
+      "components/hooks": [
+        "types/components/hooks.d.ts"
+      ],
+      "components/Select": [
+        "types/components/Select.d.ts"
+      ],
+      "components/Select.spec": [
+        "types/components/Select.spec.d.ts"
+      ],
+      "components/Select.type": [
+        "types/components/Select.type.d.ts"
+      ],
+      "components/SelectOption": [
+        "types/components/SelectOption.d.ts"
+      ],
+      "css/select.style": [
+        "types/css/select.style.d.ts"
+      ],
+      "vue": [
+        "wrapper/vue.d.ts"
+      ],
+      "components/SelectOption/react": [
+        "wrapper/components/SelectOption/react.d.ts"
+      ],
+      "components/SelectOption/preact": [
+        "wrapper/components/SelectOption/preact.d.ts"
+      ],
+      "components/SelectOption/vue": [
+        "wrapper/components/SelectOption/vue.d.ts"
+      ]
+    }
+  },
+  "types": "types/index.d.ts"
+}
