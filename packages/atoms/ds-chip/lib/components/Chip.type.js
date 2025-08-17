@@ -13,11 +13,6 @@ const ChipPropsType = {
     type: Boolean,
     reflect: true,
     value: false
-  },
-  globals: {
-    type: Boolean,
-    reflect: true,
-    value: false
   }
 };
 
