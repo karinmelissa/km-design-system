@@ -8,7 +8,7 @@ const __dirname = path.dirname(__filename);
 
 const cssFolder = path.join(__dirname, './build/css');
 const outputPath = path.join(__dirname, './index.js');
-const exportFolder = path.resolve(__dirname, '../../themes/css'); // destino externo
+const exportFolder = path.resolve(__dirname, '../../public/themes/css'); // destino externo
 
 // Copiar archivos .css desde build/css hacia themes/css
 async function copyCssFiles(srcDir, destDir) {

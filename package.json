@@ -2,10 +2,10 @@
   "name": "uikit",
   "private": true,
   "workspaces": [
+    "packages/ds-tokens",
     "packages/atoms/*",
     "packages/molecules/*",
     "packages/organisms/*",
-    "packages/ds-tokens",
     "packages/**"
   ],
   "scripts": {

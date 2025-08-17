@@ -1,4 +1,4 @@
-import { Input as _Input } from "@karinmelissa/ds-input";
+import { Input as _Input } from "@uikit/ds-input";
 import { Component } from "@atomico/react/preact";
 export const Input: Component<typeof _Input>;
 declare namespace JSX {

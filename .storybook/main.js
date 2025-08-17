@@ -35,6 +35,6 @@ const config = {
     });
   },
   docs: {},
-  staticDirs: ["./assets"],
+  staticDirs: ["../public/assets"],
 };
 export default config;

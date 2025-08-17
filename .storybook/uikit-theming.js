@@ -1,5 +1,5 @@
 import { create } from '@storybook/theming';
-import logo from "./assets/Logo_km.png";
+import logo from "../public/assets/Logo_km.png";
 
 
 export default create({
