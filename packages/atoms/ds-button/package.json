@@ -1,5 +1,8 @@
 {
   "name": "@karinmelissa/ds-button",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "description": "Button component",
   "version": "1.0.0",
   "type": "module",

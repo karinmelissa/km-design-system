@@ -1,5 +1,8 @@
 {
   "name": "@karinmelissa/ds-modal",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "description": "Modal component",
   "version": "1.0.0",
   "scripts": {

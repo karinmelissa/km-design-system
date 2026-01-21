@@ -1,6 +1,9 @@
 {
   "name": "@karinmelissa/ds-tokens",
-   "type": "module",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "type": "module",
   "description": "Tokens",
   "version": "1.0.0",
   "main": "index.js",

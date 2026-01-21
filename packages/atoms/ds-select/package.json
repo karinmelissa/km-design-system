@@ -1,5 +1,8 @@
 {
   "name": "@karinmelissa/ds-select",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "description": "Select component",
   "version": "1.0.0",
   "scripts": {

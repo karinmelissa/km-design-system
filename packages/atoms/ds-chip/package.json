@@ -1,5 +1,8 @@
 {
   "name": "@karinmelissa/ds-chip",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "description": "Chip component",
   "version": "1.0.0",
   "scripts": {

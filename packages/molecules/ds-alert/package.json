@@ -1,5 +1,8 @@
 {
   "name": "@karinmelissa/ds-alert",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "description": "Alert component",
   "version": "1.0.0",
   "scripts": {
