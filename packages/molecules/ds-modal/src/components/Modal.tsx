@@ -1,5 +1,5 @@
 import { c, css, useRef } from 'atomico';
-import '@uikit/ds-button';
+import '@karinmelissa/ds-button';
 
 /**
  *
