@@ -1,6 +1,10 @@
 {
   "name": "uikit",
   "private": true,
+  "repository": "github:karinmelissa/km-design-system",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "workspaces": [
     "packages/ds-tokens",
     "packages/atoms/*",
