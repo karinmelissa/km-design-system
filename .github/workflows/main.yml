@@ -23,7 +23,6 @@ jobs:
         with:
           node-version: 20
           cache: "npm"
-          registry: https://npm.pkg.github.com
 
       - name: Install dependencies
         run: |
@@ -32,6 +31,13 @@ jobs:
 
       - name: Build packages
         run: npm run build-all    
+
+      - name: Setup npm registry
+        run: |
+          echo "@karinmelissa:registry=https://npm.pkg.github.com" > .npmrc
+          echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" >> .npmrc
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  
 
       - name: Publish packages to GitHub Packages
         run: npm publish --workspaces --access restricted 
