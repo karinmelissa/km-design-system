@@ -1,7 +1,8 @@
 {
-  "name": "uikit",
-  "private": true,
-  "repository": "github:karinmelissa/km-design-system",
+  "name": "@karinmelissa/uikit",
+  "version": "0.0.1",
+  "private": false,
+  "repository": "github:karinmelissa/km-design-system.git",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com"
   },
