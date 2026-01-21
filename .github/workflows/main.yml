@@ -33,9 +33,6 @@ jobs:
       - name: Build packages
         run: npm run build-all    
 
-      - name: Build exports for all packages
-        run: npm run build-exports-all
-
       - name: Publish packages to GitHub Packages
         run: npm publish --workspaces --access restricted 
         env:
