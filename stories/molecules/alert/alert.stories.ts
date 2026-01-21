@@ -1,5 +1,5 @@
 import { define } from "@atomico/storybook";
-import { Alert } from "@uikit/ds-alert";
+import { Alert } from "@karinmelissa/ds-alert";
 import { html } from "atomico";
 import { withActions } from "@storybook/addon-actions/decorator";
 

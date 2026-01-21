@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@atomico/hooks": "^4.0.0",
-    "@uikit/ds-button": "^1.0.0",
+    "@karinmelissa/ds-button": "^1.0.0",
     "atomico": "latest"
   },
   "devDependencies": {

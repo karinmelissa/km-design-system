@@ -1,5 +1,5 @@
 import { define } from "@atomico/storybook";
-import { Input } from "@uikit/ds-input";
+import { Input } from "@karinmelissa/ds-input";
 import { html } from "atomico";
 import { withActions } from "@storybook/addon-actions/decorator";
 

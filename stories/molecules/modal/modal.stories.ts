@@ -1,5 +1,5 @@
 import { define } from "@atomico/storybook";
-import { Modal } from '@uikit/ds-modal';
+import { Modal } from '@karinmelissa/ds-modal';
 import { html } from "atomico";
 import { withActions } from '@storybook/addon-actions/decorator';
 

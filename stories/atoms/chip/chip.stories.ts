@@ -1,5 +1,5 @@
 import { define } from "@atomico/storybook";
-import { Chip } from "@uikit/ds-chip";
+import { Chip } from "@karinmelissa/ds-chip";
 import { html } from "atomico";
 import { withActions } from "@storybook/addon-actions/decorator";
 

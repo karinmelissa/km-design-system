@@ -1,5 +1,5 @@
 import { define } from "@atomico/storybook";
-import { Button } from '@uikit/ds-button';
+import { Button } from '@karinmelissa/ds-button';
 import { html } from "atomico";
 import { withActions } from '@storybook/addon-actions/decorator';
 

@@ -35,7 +35,7 @@ Un Web Component en este sistema se compone de los siguientes archivos principal
 ## Ejemplo de uso básico
 
 ```js
-import { Button } from "@uikit/ds-button";
+import { Button } from "@karinmelissa/ds-button";
 
 <Button variant="primary" size="medium">
   Click me
