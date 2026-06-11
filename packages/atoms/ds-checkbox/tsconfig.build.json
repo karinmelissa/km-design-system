@@ -1,0 +1,15 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.test.tsx",
+    "**/*.spec.ts",
+    "**/*.spec.tsx",
+    "vitest.config.ts",
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "types": [],
+    "skipLibCheck": true
+  }
+}
