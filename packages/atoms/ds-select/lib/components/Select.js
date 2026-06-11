@@ -1,5 +1,5 @@
 import { jsxs, jsx } from 'atomico/jsx-runtime';
-import { c, useRef, useProp, useState, useEvent, useEffect } from 'atomico';
+import { useRef, useProp, useState, useEvent, useEffect, c } from 'atomico';
 import { selectHostVartStyle, selectStyle } from '../css/select.style.js';
 import { SelectT } from './Select.type.js';
 import { useSelectDropdownNewPositionHook, useClickListenerEffect } from './hooks.js';

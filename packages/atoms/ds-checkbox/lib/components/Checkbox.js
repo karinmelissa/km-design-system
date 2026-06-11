@@ -1,5 +1,5 @@
 import { jsx, jsxs } from 'atomico/jsx-runtime';
-import { c, useProp, useEvent } from 'atomico';
+import { useProp, useEvent, c } from 'atomico';
 import { CheckboxT } from './Checkbox.type.js';
 import { checkboxStyle } from '../css/checkbox.style.js';
 

@@ -1,5 +1,5 @@
 import { jsxs, jsx } from 'atomico/jsx-runtime';
-import { c, useRef, useEvent, useEffect, css } from 'atomico';
+import { useRef, useEvent, useEffect, css, c } from 'atomico';
 
 function SelectOptionComponent({
   selected,

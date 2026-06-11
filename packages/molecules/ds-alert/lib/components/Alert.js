@@ -1,5 +1,5 @@
 import { jsx, jsxs } from 'atomico/jsx-runtime';
-import { c, useProp, useRef, useEvent } from 'atomico';
+import { useProp, useRef, useEvent, c } from 'atomico';
 import { AlertT } from './Alert.type.js';
 import { customProperties, alertStyle } from '../css/alert.style.js';
 import { useSlot } from '@atomico/hooks/use-slot';

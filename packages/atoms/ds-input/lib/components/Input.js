@@ -1,5 +1,5 @@
 import { jsxs, jsx } from 'atomico/jsx-runtime';
-import { c, useProp, useState, useRef, useEvent } from 'atomico';
+import { useProp, useState, useRef, useEvent, c } from 'atomico';
 import { InputHostStyle, InputStyle } from '../css/input.style.js';
 import { InputT } from './Input.type.js';
 

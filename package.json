@@ -30,6 +30,7 @@
     "@atomico/storybook": "^2.5.0",
     "@atomico/tsconfig": "^1.1.2",
     "@atomico/vite": "^2.3.2",
+    "vite": "^6.4.3",
     "@babel/core": "^7.15.5",
     "@etchteam/storybook-addon-css-variables-theme": "^3.0.0",
     "@open-wc/testing": "^4.0.0",

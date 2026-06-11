@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@atomico/hooks": "^4.0.0",
-    "atomico": "latest"
+    "atomico": "^1.79.2"
   },
   "devDependencies": {
     "@atomico/exports": "^1.13.2",
@@ -32,7 +32,7 @@
     "csso": "latest",
     "jsdom": "^21.1.1",
     "typescript": "^4.8.4",
-    "vite": "^4.2.1",
+    "vite": "^6.4.3",
     "vite-plugin-istanbul": "^3.0.1"
   },
   "peerDependencies": {

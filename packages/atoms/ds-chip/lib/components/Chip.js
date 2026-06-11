@@ -1,5 +1,5 @@
 import { jsx, jsxs } from 'atomico/jsx-runtime';
-import { c, useRef, useProp, useEvent } from 'atomico';
+import { useRef, useProp, useEvent, c } from 'atomico';
 import { chipStyle } from '../css/chip.style.js';
 import { ChipPropsType } from './Chip.type.js';
 
