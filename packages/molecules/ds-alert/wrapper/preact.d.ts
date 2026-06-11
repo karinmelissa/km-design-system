@@ -1,4 +1,4 @@
-import { Alert as _Alert } from "@uikit/ds-alert";
+import { Alert as _Alert } from "@karinmelissa/ds-alert";
 import { Component } from "@atomico/react/preact";
 export const Alert: Component<typeof _Alert>;
 declare namespace JSX {

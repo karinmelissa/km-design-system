@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@atomico/hooks": "^4.0.0",
-    "atomico": "latest"
+    "atomico": "^1.79.2"
   },
   "devDependencies": {
     "@atomico/exports": "^1.13.2",
@@ -73,6 +73,21 @@
     "./preact": {
       "types": "./wrapper/preact.d.ts",
       "default": "./wrapper/preact.js"
+    },
+    "./index2": {
+      "default": "./lib/index2.js"
+    },
+    "./index2/react": {
+      "types": "./wrapper/index2/react.d.ts",
+      "default": "./wrapper/index2/react.js"
+    },
+    "./index2/preact": {
+      "types": "./wrapper/index2/preact.d.ts",
+      "default": "./wrapper/index2/preact.js"
+    },
+    "./index2/vue": {
+      "types": "./wrapper/index2/vue.d.ts",
+      "default": "./wrapper/index2/vue.js"
     }
   },
   "types": "types/index.d.ts",
@@ -98,6 +113,15 @@
       ],
       "vue": [
         "wrapper/vue.d.ts"
+      ],
+      "index2/react": [
+        "wrapper/index2/react.d.ts"
+      ],
+      "index2/preact": [
+        "wrapper/index2/preact.d.ts"
+      ],
+      "index2/vue": [
+        "wrapper/index2/vue.d.ts"
       ]
     }
   }

@@ -1,6 +1,6 @@
 import { c, useRef, css } from 'atomico';
 import { jsx, jsxs } from 'atomico/jsx-runtime';
-import '@uikit/ds-button';
+import '@karinmelissa/ds-button';
 
 function ModalComponent({ title, subtitle, onClose, open }) {
   const refSlotFooter = useRef();

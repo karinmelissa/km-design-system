@@ -1,4 +1,4 @@
-import { SelectOption as _SelectOption } from "@uikit/ds-select/components/SelectOption";
+import { SelectOption as _SelectOption } from "@karinmelissa/ds-select/components/SelectOption";
 import { Component } from "@atomico/react/preact";
 export const SelectOption: Component<typeof _SelectOption>;
 declare namespace JSX {

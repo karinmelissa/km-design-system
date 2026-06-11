@@ -1,4 +1,4 @@
-import '@uikit/ds-button';
+import '@karinmelissa/ds-button';
 export declare const Modal: import("atomico/types/dom").Atomico<{
     title: string;
     subtitle: string;

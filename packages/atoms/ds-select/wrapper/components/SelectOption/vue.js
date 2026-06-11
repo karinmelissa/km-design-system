@@ -1,4 +1,4 @@
 "use client";
-import { SelectOption as _SelectOption } from "@uikit/ds-select/components/SelectOption";
+import { SelectOption as _SelectOption } from "@karinmelissa/ds-select/components/SelectOption";
 import { auto } from "@atomico/vue";
 export const SelectOption = auto(_SelectOption);
