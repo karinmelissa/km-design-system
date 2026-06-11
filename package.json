@@ -24,14 +24,15 @@
     "s-wc": "npm run start -w",
     "b-wc": "npm run build -w",
     "ex-wc": "npm run exports -w",
-    "lint": "eslint . --ext .js --ext .jsx --ext .tsx"
+    "lint": "eslint . --ext .js --ext .jsx --ext .tsx --ext .ts",
+    "release": "npm run build-all && npm publish --workspaces --access restricted"
   },
   "devDependencies": {
     "@atomico/storybook": "^2.5.0",
     "@atomico/tsconfig": "^1.1.2",
     "@atomico/vite": "^2.3.2",
-    "vite": "^6.4.3",
     "@babel/core": "^7.15.5",
+    "@changesets/cli": "^2.31.0",
     "@etchteam/storybook-addon-css-variables-theme": "^3.0.0",
     "@open-wc/testing": "^4.0.0",
     "@storybook/addon-actions": "^8.6.14",
@@ -52,6 +53,7 @@
     "husky": "^8.0.3",
     "storybook": "^8.6.14",
     "typescript": "5.0.4",
+    "vite": "^6.4.3",
     "vitest": "^3.1.4"
   },
   "husky": {
