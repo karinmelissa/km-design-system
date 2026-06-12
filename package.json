@@ -25,7 +25,7 @@
     "b-wc": "npm run build -w",
     "ex-wc": "npm run exports -w",
     "lint": "eslint . --ext .js --ext .jsx --ext .tsx --ext .ts",
-    "release": "npm run build-all && npm publish --workspaces --access restricted"
+    "release": "changeset publish"
   },
   "devDependencies": {
     "@atomico/storybook": "^2.5.0",
