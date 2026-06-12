@@ -30,3 +30,4 @@ yarn-error.log*
 /packages/*/*/dist
 /packages/*/*/build
 /packages/*/*/lib
+/packages/*/*/coverage
