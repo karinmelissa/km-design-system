@@ -31,6 +31,34 @@ jobs:
       - name: Build packages
         run: npm run build-all
 
+      - name: Debug npm auth
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "=== Active npm config ==="
+          npm config list
+
+          echo ""
+          echo "=== Project .npmrc ==="
+          cat .npmrc 2>/dev/null || echo "(not found)"
+
+          echo ""
+          echo "=== User ~/.npmrc ==="
+          cat ~/.npmrc 2>/dev/null || echo "(not found)"
+
+          echo ""
+          echo "=== Token identity (GitHub API) ==="
+          curl -sf -H "Authorization: Bearer ${NODE_AUTH_TOKEN}" \
+            https://api.github.com/user | grep -E '"login"|"type"' || echo "API call failed"
+
+          echo ""
+          echo "=== npm info ds-button (verbose) ==="
+          npm info @karinmelissa/ds-button --loglevel verbose 2>&1 || true
+
+          echo ""
+          echo "=== npm info ds-tokens (verbose) ==="
+          npm info @karinmelissa/ds-tokens --loglevel verbose 2>&1 || true
+
       - name: Create Release PR or Publish
         uses: changesets/action@v1
         with:
