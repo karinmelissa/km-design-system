@@ -24,8 +24,6 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          registry-url: https://npm.pkg.github.com
-          scope: "@karinmelissa"
 
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
