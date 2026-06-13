@@ -5,7 +5,7 @@ export default defineConfig({
     globals: true,
     environment: "jsdom",
     passWithNoTests: true,
-    exclude: ["**/node_modules/**", "**/dist/**", "src/components/Alert.spec.tsx"],
+    exclude: ["**/node_modules/**", "**/dist/**"],
     coverage: {
       include: ["src/**/*.{js,ts,jsx,tsx}"]
     }
