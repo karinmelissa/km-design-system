@@ -1,0 +1,137 @@
+import { Meta, ColorPalette, ColorItem } from "@storybook/addon-docs";
+
+<Meta title="Tokens/Semantic" />
+
+# Semantic & Role Tokens
+
+La capa semántica es el nivel intermedio entre los primitivos de color y los componentes: **Primitivos → Roles → Componentes**.
+
+Los componentes deben consumir estos tokens para que el cambio de tema y el modo oscuro funcionen de forma automática.
+
+---
+
+## Cómo funciona
+
+```
+data-mode="dark"  →  [data-mode="dark"] { --ds-color-surface: #1B1916; … }
+OS dark mode      →  @media (prefers-color-scheme: dark) { … }
+data-mode="light" →  [data-mode="light"] { … }  ← sobreescribe la media query
+```
+
+Los tokens de acción (`--ds-color-action-*`) se vinculan a `--ds-primary-color-*` del stylesheet activo y cambian automáticamente con el tema.
+
+---
+
+export const TokenRow = ({ token, lightValue, darkValue, description }) => (
+  <tr>
+    <td style={{ fontFamily: 'monospace', fontSize: '0.8rem', padding: '8px 12px', borderBottom: '1px solid #E4E2DD' }}>{token}</td>
+    <td style={{ padding: '8px 12px', borderBottom: '1px solid #E4E2DD' }}>
+      <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px' }}>
+        <span style={{ width: '24px', height: '24px', borderRadius: '4px', background: lightValue, border: '1px solid #CBC7C0', flexShrink: 0 }} />
+        <code style={{ fontSize: '0.75rem' }}>{lightValue}</code>
+      </span>
+    </td>
+    <td style={{ padding: '8px 12px', borderBottom: '1px solid #E4E2DD' }}>
+      <span style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', background: '#292826', padding: '2px 6px', borderRadius: '4px' }}>
+        <span style={{ width: '24px', height: '24px', borderRadius: '4px', background: darkValue, border: '1px solid #5E5A55', flexShrink: 0 }} />
+        <code style={{ fontSize: '0.75rem', color: '#E4E2DD' }}>{darkValue}</code>
+      </span>
+    </td>
+    <td style={{ fontSize: '0.8rem', color: '#7F7A73', padding: '8px 12px', borderBottom: '1px solid #E4E2DD' }}>{description}</td>
+  </tr>
+);
+
+export const TokenTable = ({ children }) => (
+  <table style={{ width: '100%', borderCollapse: 'collapse', marginBottom: '32px', fontSize: '0.875rem' }}>
+    <thead>
+      <tr style={{ background: '#E4E2DD' }}>
+        <th style={{ textAlign: 'left', padding: '8px 12px' }}>Token</th>
+        <th style={{ textAlign: 'left', padding: '8px 12px' }}>Light</th>
+        <th style={{ textAlign: 'left', padding: '8px 12px' }}>Dark</th>
+        <th style={{ textAlign: 'left', padding: '8px 12px' }}>Uso</th>
+      </tr>
+    </thead>
+    <tbody>{children}</tbody>
+  </table>
+);
+
+## Superficies
+`--ds-color-surface-*`
+
+<TokenTable>
+  <TokenRow token="--ds-color-surface"         lightValue="#FFFFFF"  darkValue="#1B1916" description="Fondo de tarjeta, modal, panel" />
+  <TokenRow token="--ds-color-surface-sunken"  lightValue="#E4E2DD"  darkValue="#110F0D" description="Fondo de página (canvas)" />
+  <TokenRow token="--ds-color-surface-raised"  lightValue="#FFFFFF"  darkValue="#262320" description="Tarjeta elevada, dropdown" />
+  <TokenRow token="--ds-color-surface-inverse" lightValue="#292826"  darkValue="#E4E2DD" description="Tooltip oscuro en light, claro en dark" />
+</TokenTable>
+
+## Texto
+`--ds-color-text-*`
+
+<TokenTable>
+  <TokenRow token="--ds-color-text-primary"   lightValue="#292826"  darkValue="#F1EEE9" description="Títulos y cuerpo principal" />
+  <TokenRow token="--ds-color-text-secondary" lightValue="#7F7A73"  darkValue="#BBB7B0" description="Labels, metadatos, ayuda" />
+  <TokenRow token="--ds-color-text-disabled"  lightValue="#AFAAA3"  darkValue="#78746E" description="Texto deshabilitado" />
+  <TokenRow token="--ds-color-text-inverse"   lightValue="#FFFFFF"  darkValue="#292826" description="Texto sobre superficie inversa" />
+</TokenTable>
+
+## Bordes
+`--ds-color-border-*`
+
+<TokenTable>
+  <TokenRow token="--ds-color-border"        lightValue="#D9D6D0"  darkValue="#36322E" description="Borde de input, card flat" />
+  <TokenRow token="--ds-color-border-strong" lightValue="#BEBAB2"  darkValue="#534F4A" description="Borde de énfasis, separador" />
+</TokenTable>
+
+## Acción
+`--ds-color-action-*` · Los valores Light/Dark mostrados son los del Theme 1 (Indigo/Blue).
+
+<TokenTable>
+  <TokenRow token="--ds-color-action"        lightValue="#17559B" darkValue="#92C4FF" description="Botón primario, enlace (paso 60/30)" />
+  <TokenRow token="--ds-color-action-hover"  lightValue="#124177" darkValue="#BADCFF" description="Hover (paso 70/20)" />
+  <TokenRow token="--ds-color-action-active" lightValue="#124177" darkValue="#DAEDFF" description="Press (paso 70/10)" />
+  <TokenRow token="--ds-color-on-action"     lightValue="#FFFFFF" darkValue="#110F0D" description="Texto/ícono encima de botón de acción" />
+  <TokenRow token="--ds-color-accent"        lightValue="#226BC0" darkValue="#92C4FF" description="Acento vibrante — franja de marca (paso 50/30)" />
+  <TokenRow token="--ds-color-focus-ring"    lightValue="#3A87E2" darkValue="#92C4FF" description="Anillo de foco (paso 40/30)" />
+</TokenTable>
+
+---
+
+## Neutrales oscuros (Dark Mode)
+
+Superficies cálidas — no grises puros. Derivadas de la escala perceptual OKLCH con tono ~70.
+
+export const DarkSwatch = ({ label, value }) => (
+  <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '12px' }}>
+    <div style={{ width: '48px', height: '48px', borderRadius: '8px', background: value, border: '1px solid #5E5A55', flexShrink: 0 }} />
+    <div>
+      <code style={{ fontSize: '0.8rem', color: '#E4E2DD', display: 'block' }}>{value}</code>
+      <span style={{ fontSize: '0.75rem', color: '#99948D' }}>{label}</span>
+    </div>
+  </div>
+);
+
+<div style={{ background: '#0A0907', padding: '20px', borderRadius: '12px', marginBottom: '32px' }}>
+  <DarkSwatch label="surface-sunken · #110F0D" value="#110F0D" />
+  <DarkSwatch label="surface · #1B1916"        value="#1B1916" />
+  <DarkSwatch label="surface-raised · #262320" value="#262320" />
+  <DarkSwatch label="border · #36322E"         value="#36322E" />
+  <DarkSwatch label="border-strong · #534F4A"  value="#534F4A" />
+  <DarkSwatch label="text-disabled · #78746E"  value="#78746E" />
+  <DarkSwatch label="text-secondary · #BBB7B0" value="#BBB7B0" />
+  <DarkSwatch label="text-primary · #F1EEE9"   value="#F1EEE9" />
+</div>
+
+---
+
+## Activar modo oscuro
+
+```html
+<!-- Explícito -->
+<body data-mode="dark"> … </body>
+
+<!-- Forzar modo claro sobre preferencia del SO -->
+<div data-mode="light"> … </div>
+
+<!-- Automático — respeta prefers-color-scheme sin atributo -->
+```

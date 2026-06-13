@@ -1,0 +1,15 @@
+{
+  "ds": {
+    "gradient": {
+      "blue-magenta":     { "value": "linear-gradient(in oklch 135deg, #3A87E2, #CD5394)" },
+      "blue-teal":        { "value": "linear-gradient(in oklch 135deg, #3A87E2, #00A26E)" },
+      "orange-teal":      { "value": "linear-gradient(in oklch 135deg, #E87F0C, #00A26E)" },
+      "orange-magenta":   { "value": "linear-gradient(in oklch 135deg, #E87F0C, #CD5394)" },
+      "rainbow":          { "value": "linear-gradient(in oklch 90deg, #CD5394 0%, #3A87E2 33.3%, #00A26E 66.6%, #E87F0C 100%)" },
+      "blue-magenta-h":   { "value": "linear-gradient(in oklch 90deg, #3A87E2, #CD5394)" },
+      "blue-teal-h":      { "value": "linear-gradient(in oklch 90deg, #3A87E2, #00A26E)" },
+      "orange-teal-h":    { "value": "linear-gradient(in oklch 90deg, #E87F0C, #00A26E)" },
+      "orange-magenta-h": { "value": "linear-gradient(in oklch 90deg, #E87F0C, #CD5394)" }
+    }
+  }
+}

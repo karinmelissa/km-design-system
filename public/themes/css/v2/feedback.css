@@ -1,0 +1,39 @@
+/* Karin Melissa — v2 semantic / feedback colors (hex)
+ * ---------------------------------------------------------------------------
+ * Derived from the OKLCH perceptual ladder, converted to sRGB hex.
+ * These override the v1 globals values (same token names, load after them).
+ *
+ *   Success  hue 145  — clean green
+ *   Error    hue  20  — unambiguous red
+ *   Warning  hue  55  — warm amber
+ *   Info     hue 215  — sky blue
+ */
+:root {
+  /* Success */
+  --ds-globals-color-success-10: #E5F3E4;
+  --ds-globals-color-success-20: #C0E3C0;
+  --ds-globals-color-success-30: #6AB76D;
+  --ds-globals-color-success-40: #308639;
+  --ds-globals-color-success-50: #0B5417;
+
+  /* Error */
+  --ds-globals-color-error-10: #FDE9E8;
+  --ds-globals-color-error-20: #FCC9C8;
+  --ds-globals-color-error-30: #E46F72;
+  --ds-globals-color-error-40: #AE3F46;
+  --ds-globals-color-error-50: #731E26;
+
+  /* Warning */
+  --ds-globals-color-warning-10: #FFEDE0;
+  --ds-globals-color-warning-20: #FFD3B4;
+  --ds-globals-color-warning-30: #F59E60;
+  --ds-globals-color-warning-40: #CA7027;
+  --ds-globals-color-warning-50: #8F4802;
+
+  /* Info */
+  --ds-globals-color-info-10: #DFF3F8;
+  --ds-globals-color-info-20: #AFE1EE;
+  --ds-globals-color-info-30: #1CB2CE;
+  --ds-globals-color-info-40: #0084A0;
+  --ds-globals-color-info-50: #00566C;
+}

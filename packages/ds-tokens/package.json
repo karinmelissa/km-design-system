@@ -5,7 +5,7 @@
   },
   "type": "module",
   "description": "Tokens",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.js",
   "scripts": {
     "build": "node ./build.js && node writeTokens",
@@ -31,6 +31,12 @@
     "./theme3Scss": "./build/scss/theme3/theme3.scss",
     "./theme4Scss": "./build/scss/theme4/theme4.scss",
     "./jsTokens": "./build/js/tokens.js",
+    "./v2": "./v2/index.css",
+    "./v2/brand-scales": "./v2/brand-scales.css",
+    "./v2/semantic": "./v2/semantic.css",
+    "./v2/type": "./v2/type.css",
+    "./v2/gradients": "./v2/gradients.css",
+    "./v2/feedback": "./v2/feedback.css",
     ".": "./index.js"
   },
   "typesVersions": {

@@ -1,0 +1,117 @@
+/* Karin Melissa — v2 semantic role layer
+ * ---------------------------------------------------------------------------
+ * Role tier: primitives → ROLES → components.
+ * Light is the default. Dark activates via [data-mode="dark"] or OS preference.
+ * Neutrals use warm hex values (not pure gray/black) in both modes.
+ *
+ * Requires: brand-scales.css (for --ds-brand-* variables)
+ *           globals.css or theme*.css (for --ds-globals-color-neutrals-*)
+ */
+:root {
+  /* Surfaces */
+  --ds-color-surface:         var(--ds-globals-color-neutrals-0);
+  --ds-color-surface-sunken:  var(--ds-globals-color-neutrals-10);
+  --ds-color-surface-raised:  var(--ds-globals-color-neutrals-0);
+  --ds-color-surface-inverse: var(--ds-globals-color-neutrals-100);
+
+  /* Text */
+  --ds-color-text-primary:   var(--ds-globals-color-neutrals-100);
+  --ds-color-text-secondary: var(--ds-globals-color-neutrals-70);
+  --ds-color-text-disabled:  var(--ds-globals-color-neutrals-50);
+  --ds-color-text-inverse:   var(--ds-globals-color-neutrals-0);
+
+  /* Borders */
+  --ds-color-border:        var(--ds-globals-color-neutrals-20);
+  --ds-color-border-strong: var(--ds-globals-color-neutrals-40);
+
+  /* Action */
+  --ds-color-action:        var(--ds-brand-700);
+  --ds-color-action-hover:  var(--ds-brand-800);
+  --ds-color-action-active: var(--ds-brand-900);
+  --ds-color-action-subtle: color-mix(in srgb, var(--ds-brand-500) 12%, var(--ds-color-surface));
+  --ds-color-on-action:     var(--ds-globals-color-neutrals-0);
+  --ds-color-accent:        var(--ds-brand-500);
+  --ds-color-focus-ring:    var(--ds-brand-400);
+
+  color-scheme: light;
+}
+
+/* ----- Dark mode -------------------------------------------------------- */
+:root[data-mode="dark"],
+[data-mode="dark"] {
+  --ds-color-surface:         #1B1916;
+  --ds-color-surface-sunken:  #110F0D;
+  --ds-color-surface-raised:  #262320;
+  --ds-color-surface-inverse: var(--ds-globals-color-neutrals-10);
+
+  --ds-color-text-primary:   #F1EEE9;
+  --ds-color-text-secondary: #BBB7B0;
+  --ds-color-text-disabled:  #78746E;
+  --ds-color-text-inverse:   var(--ds-globals-color-neutrals-100);
+
+  --ds-color-border:        #36322E;
+  --ds-color-border-strong: #534F4A;
+
+  --ds-color-action:        var(--ds-brand-400);
+  --ds-color-action-hover:  var(--ds-brand-300);
+  --ds-color-action-active: var(--ds-brand-200);
+  --ds-color-action-subtle: color-mix(in srgb, var(--ds-brand-500) 22%, #1B1916);
+  --ds-color-on-action:     #110F0D;
+  --ds-color-accent:        var(--ds-brand-400);
+  --ds-color-focus-ring:    var(--ds-brand-400);
+
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ds-color-surface:         #1B1916;
+    --ds-color-surface-sunken:  #110F0D;
+    --ds-color-surface-raised:  #262320;
+    --ds-color-surface-inverse: var(--ds-globals-color-neutrals-10);
+
+    --ds-color-text-primary:   #F1EEE9;
+    --ds-color-text-secondary: #BBB7B0;
+    --ds-color-text-disabled:  #78746E;
+    --ds-color-text-inverse:   var(--ds-globals-color-neutrals-100);
+
+    --ds-color-border:        #36322E;
+    --ds-color-border-strong: #534F4A;
+
+    --ds-color-action:        var(--ds-brand-400);
+    --ds-color-action-hover:  var(--ds-brand-300);
+    --ds-color-action-active: var(--ds-brand-200);
+    --ds-color-action-subtle: color-mix(in srgb, var(--ds-brand-500) 22%, #1B1916);
+    --ds-color-on-action:     #110F0D;
+    --ds-color-accent:        var(--ds-brand-400);
+    --ds-color-focus-ring:    var(--ds-brand-400);
+
+    color-scheme: dark;
+  }
+}
+
+/* Explicit light — wins over OS preference */
+[data-mode="light"] {
+  --ds-color-surface:         var(--ds-globals-color-neutrals-0);
+  --ds-color-surface-sunken:  var(--ds-globals-color-neutrals-10);
+  --ds-color-surface-raised:  var(--ds-globals-color-neutrals-0);
+  --ds-color-surface-inverse: var(--ds-globals-color-neutrals-100);
+
+  --ds-color-text-primary:   var(--ds-globals-color-neutrals-100);
+  --ds-color-text-secondary: var(--ds-globals-color-neutrals-70);
+  --ds-color-text-disabled:  var(--ds-globals-color-neutrals-50);
+  --ds-color-text-inverse:   var(--ds-globals-color-neutrals-0);
+
+  --ds-color-border:        var(--ds-globals-color-neutrals-20);
+  --ds-color-border-strong: var(--ds-globals-color-neutrals-40);
+
+  --ds-color-action:        var(--ds-brand-700);
+  --ds-color-action-hover:  var(--ds-brand-800);
+  --ds-color-action-active: var(--ds-brand-900);
+  --ds-color-action-subtle: color-mix(in srgb, var(--ds-brand-500) 12%, var(--ds-color-surface));
+  --ds-color-on-action:     var(--ds-globals-color-neutrals-0);
+  --ds-color-accent:        var(--ds-brand-500);
+  --ds-color-focus-ring:    var(--ds-brand-400);
+
+  color-scheme: light;
+}

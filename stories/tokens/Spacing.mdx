@@ -1,0 +1,74 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Tokens/Spacing" />
+
+# Spacing & Border Radius
+
+Base de **4px**. Los pasos están nombrados por número de escala, no por píxeles.
+
+---
+
+## Espaciado
+
+`--ds-globals-spacing-*`
+
+export const SpacingRow = ({ token, rem, px, usage }) => (
+  <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '8px', paddingBottom: '8px', borderBottom: '1px solid #E4E2DD' }}>
+    <div style={{ width: rem === '0rem' ? '2px' : rem, height: '24px', background: 'oklch(0.620 0.158 255)', borderRadius: '2px', minWidth: '2px', flexShrink: 0, maxWidth: '280px' }} />
+    <code style={{ fontSize: '0.75rem', color: '#292826', minWidth: '220px' }}>{token}</code>
+    <span style={{ fontSize: '0.75rem', color: '#7F7A73', minWidth: '80px' }}>{rem}</span>
+    <span style={{ fontSize: '0.75rem', color: '#AFAAA3', minWidth: '48px' }}>{px}</span>
+    <span style={{ fontSize: '0.75rem', color: '#99948D' }}>{usage}</span>
+  </div>
+);
+
+<SpacingRow token="--ds-globals-spacing-0"   rem="0rem"    px="0px"  usage="Reset" />
+<SpacingRow token="--ds-globals-spacing-50"  rem="0.25rem" px="4px"  usage="Gap entre ícono y texto, offset de foco" />
+<SpacingRow token="--ds-globals-spacing-100" rem="0.5rem"  px="8px"  usage="Padding inline de chip/badge, gap de grupo" />
+<SpacingRow token="--ds-globals-spacing-150" rem="0.75rem" px="12px" usage="Padding vertical de input pequeño" />
+<SpacingRow token="--ds-globals-spacing-200" rem="1rem"    px="16px" usage="Padding base de inputs y botones" />
+<SpacingRow token="--ds-globals-spacing-250" rem="1.25rem" px="20px" usage="Padding interno de tarjeta compacta" />
+<SpacingRow token="--ds-globals-spacing-300" rem="1.5rem"  px="24px" usage="Padding de tarjeta estándar (default card padding)" />
+<SpacingRow token="--ds-globals-spacing-400" rem="2rem"    px="32px" usage="Separación entre secciones, padding de modal" />
+<SpacingRow token="--ds-globals-spacing-500" rem="2.5rem"  px="40px" usage="Margen entre bloques de contenido" />
+<SpacingRow token="--ds-globals-spacing-600" rem="3rem"    px="48px" usage="Padding de sección hero" />
+<SpacingRow token="--ds-globals-spacing-700" rem="3.5rem"  px="56px" usage="Separación entre columnas de layout" />
+<SpacingRow token="--ds-globals-spacing-800" rem="4rem"    px="64px" usage="Márgenes de página" />
+
+---
+
+## Border Radius
+
+`--ds-globals-border-radius-*`
+
+> **Guía de uso:** inputs y tarjetas pequeñas usan `-50`–`-100` (4–8px). Tarjetas medianas `-200` (16px). **Botones, chips y badges son pills** — usar `-400` o `-800`.
+
+export const RadiusRow = ({ token, rem, px, usage }) => (
+  <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '12px' }}>
+    <div style={{
+      width: '56px',
+      height: '56px',
+      background: 'oklch(0.885 0.072 255)',
+      border: '2px solid oklch(0.620 0.158 255)',
+      borderRadius: rem,
+      flexShrink: 0,
+    }} />
+    <code style={{ fontSize: '0.75rem', color: '#292826', minWidth: '240px' }}>{token}</code>
+    <span style={{ fontSize: '0.75rem', color: '#7F7A73', minWidth: '72px' }}>{rem}</span>
+    <span style={{ fontSize: '0.75rem', color: '#AFAAA3', minWidth: '48px' }}>{px}</span>
+    <span style={{ fontSize: '0.75rem', color: '#99948D' }}>{usage}</span>
+  </div>
+);
+
+<RadiusRow token="--ds-globals-border-radius-0"   rem="0rem"    px="0px"  usage="Sin radio (tablas, separadores)" />
+<RadiusRow token="--ds-globals-border-radius-50"  rem="0.25rem" px="4px"  usage="Inputs pequeños, tooltips" />
+<RadiusRow token="--ds-globals-border-radius-100" rem="0.5rem"  px="8px"  usage="Inputs, selects, tarjetas pequeñas" />
+<RadiusRow token="--ds-globals-border-radius-150" rem="0.75rem" px="12px" usage="Menús, popovers" />
+<RadiusRow token="--ds-globals-border-radius-200" rem="1rem"    px="16px" usage="Tarjetas medianas, modals" />
+<RadiusRow token="--ds-globals-border-radius-250" rem="1.25rem" px="20px" usage="—" />
+<RadiusRow token="--ds-globals-border-radius-300" rem="1.5rem"  px="24px" usage="Tarjetas grandes" />
+<RadiusRow token="--ds-globals-border-radius-400" rem="2rem"    px="32px" usage="Botones pill, chips" />
+<RadiusRow token="--ds-globals-border-radius-500" rem="2.5rem"  px="40px" usage="—" />
+<RadiusRow token="--ds-globals-border-radius-600" rem="3rem"    px="48px" usage="—" />
+<RadiusRow token="--ds-globals-border-radius-700" rem="3.5rem"  px="56px" usage="—" />
+<RadiusRow token="--ds-globals-border-radius-800" rem="4rem"    px="64px" usage="Full pill / círculo" />

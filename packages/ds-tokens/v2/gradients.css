@@ -1,0 +1,27 @@
+/* Karin Melissa — v2 brand-derived gradient tokens
+ * ---------------------------------------------------------------------------
+ * Color stops are hex values derived from OKLCH 500 brand steps.
+ * The `in oklch` interpolation hint is preserved so hue transitions
+ * remain perceptually smooth — the browser converts hex to OKLCH for blending.
+ *
+ * Five gradients (all 135deg diagonal) + horizontal variants (90deg).
+ *
+ * Requires: brand-scales.css (for --ds-c-*-500 variable aliases)
+ */
+:root {
+  /* ---- two-stop brand gradients (135deg) ---- */
+  --ds-gradient-blue-magenta:   linear-gradient(in oklch 135deg, #3A87E2, #CD5394);
+  --ds-gradient-blue-teal:      linear-gradient(in oklch 135deg, #3A87E2, #00A26E);
+  --ds-gradient-orange-teal:    linear-gradient(in oklch 135deg, #E87F0C, #00A26E);
+  --ds-gradient-orange-magenta: linear-gradient(in oklch 135deg, #E87F0C, #CD5394);
+
+  /* ---- four-brand rainbow (stripe order from the wordmark) ---- */
+  --ds-gradient-rainbow: linear-gradient(in oklch 90deg,
+    #CD5394 0%, #3A87E2 33.3%, #00A26E 66.6%, #E87F0C 100%);
+
+  /* ---- horizontal variants (90deg) ---- */
+  --ds-gradient-blue-magenta-h:   linear-gradient(in oklch 90deg, #3A87E2, #CD5394);
+  --ds-gradient-blue-teal-h:      linear-gradient(in oklch 90deg, #3A87E2, #00A26E);
+  --ds-gradient-orange-teal-h:    linear-gradient(in oklch 90deg, #E87F0C, #00A26E);
+  --ds-gradient-orange-magenta-h: linear-gradient(in oklch 90deg, #E87F0C, #CD5394);
+}

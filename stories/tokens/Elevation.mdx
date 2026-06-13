@@ -1,0 +1,123 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Tokens/Elevation" />
+
+# Elevation, Stroke & Overlay
+
+---
+
+## Sombras
+
+Una sola forma de sombra — `0 4px 20px rgba(36,36,38, α)` — en cinco opacidades. Suave, baja y neutra. Sin sombras de colores ni duras.
+
+`--ds-globals-elevation-shadow-*`
+
+export const ShadowCard = ({ token, shadow, label, usage }) => (
+  <div style={{ display: 'flex', alignItems: 'center', gap: '24px', marginBottom: '20px' }}>
+    <div style={{
+      width: '80px',
+      height: '80px',
+      background: '#FFFFFF',
+      borderRadius: '12px',
+      boxShadow: shadow,
+      flexShrink: 0,
+    }} />
+    <div>
+      <code style={{ fontSize: '0.8rem', color: '#292826', display: 'block', marginBottom: '4px' }}>{token}</code>
+      <span style={{ fontSize: '0.75rem', color: '#7F7A73', display: 'block' }}>{label}</span>
+      <span style={{ fontSize: '0.75rem', color: '#AFAAA3' }}>{usage}</span>
+    </div>
+  </div>
+);
+
+<div style={{ background: '#E4E2DD', padding: '32px', borderRadius: '16px' }}>
+  <ShadowCard
+    token="--ds-globals-elevation-shadow-5"
+    shadow="0px 4px 20px 0px rgba(36, 36, 38, 0.05)"
+    label="rgba(36,36,38, 0.05)"
+    usage="Tarjetas planas, nivel de reposo"
+  />
+  <ShadowCard
+    token="--ds-globals-elevation-shadow-10"
+    shadow="0px 4px 20px 0px rgba(36, 36, 38, 0.10)"
+    label="rgba(36,36,38, 0.10)"
+    usage="Tarjeta raised estándar"
+  />
+  <ShadowCard
+    token="--ds-globals-elevation-shadow-15"
+    shadow="0px 4px 20px 0px rgba(36, 36, 38, 0.15)"
+    label="rgba(36,36,38, 0.15)"
+    usage="Dropdown, menú contextual"
+  />
+  <ShadowCard
+    token="--ds-globals-elevation-shadow-20"
+    shadow="0px 4px 20px 0px rgba(36, 36, 38, 0.20)"
+    label="rgba(36,36,38, 0.20)"
+    usage="Tarjeta en hover (lift)"
+  />
+  <ShadowCard
+    token="--ds-globals-elevation-shadow-25"
+    shadow="0px 4px 20px 0px rgba(36, 36, 38, 0.25)"
+    label="rgba(36,36,38, 0.25)"
+    usage="Modal, drawer"
+  />
+</div>
+
+---
+
+## Overlays de Modal
+
+Fondos semitransparentes para capas de modal y backdrop. Sin blur — el sistema no usa frosted glass.
+
+`--ds-globals-elevation-overlay-*`
+
+export const OverlayRow = ({ token, value, label }) => (
+  <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '10px' }}>
+    <div style={{
+      width: '56px',
+      height: '32px',
+      background: value,
+      borderRadius: '6px',
+      flexShrink: 0,
+      border: '1px solid #CBC7C0',
+    }} />
+    <code style={{ fontSize: '0.75rem', color: '#292826', minWidth: '240px' }}>{token}</code>
+    <span style={{ fontSize: '0.75rem', color: '#7F7A73' }}>{value} · {label}</span>
+  </div>
+);
+
+<OverlayRow token="--ds-globals-elevation-overlay-5" value="rgba(0, 0, 0, 0.5)" label="50% — Modal estándar" />
+<OverlayRow token="--ds-globals-elevation-overlay-4" value="rgba(0, 0, 0, 0.6)" label="60%" />
+<OverlayRow token="--ds-globals-elevation-overlay-3" value="rgba(0, 0, 0, 0.7)" label="70%" />
+<OverlayRow token="--ds-globals-elevation-overlay-2" value="rgba(0, 0, 0, 0.8)" label="80%" />
+<OverlayRow token="--ds-globals-elevation-overlay-1" value="rgba(0, 0, 0, 0.9)" label="90% — Bloqueo total de fondo" />
+
+---
+
+## Stroke (grosor de borde)
+
+`--ds-globals-stroke-*`
+
+> Inputs y cards usan `stroke-1`. Botón secondary (outline) usa `stroke-2`. El anillo de foco usa `stroke-4`.
+
+export const StrokeRow = ({ token, rem, px, usage }) => (
+  <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '12px' }}>
+    <div style={{
+      width: '80px',
+      height: '32px',
+      background: 'transparent',
+      border: `${rem} solid oklch(0.620 0.158 255)`,
+      borderRadius: '6px',
+      flexShrink: 0,
+    }} />
+    <code style={{ fontSize: '0.75rem', color: '#292826', minWidth: '220px' }}>{token}</code>
+    <span style={{ fontSize: '0.75rem', color: '#7F7A73', minWidth: '60px' }}>{rem}</span>
+    <span style={{ fontSize: '0.75rem', color: '#AFAAA3', minWidth: '44px' }}>{px}</span>
+    <span style={{ fontSize: '0.75rem', color: '#99948D' }}>{usage}</span>
+  </div>
+);
+
+<StrokeRow token="--ds-globals-stroke-1" rem="0.063rem" px="~1px" usage="Borde de input, card, separador" />
+<StrokeRow token="--ds-globals-stroke-2" rem="0.125rem" px="2px"  usage="Botón secondary (outline), borde de énfasis" />
+<StrokeRow token="--ds-globals-stroke-3" rem="0.188rem" px="3px"  usage="—" />
+<StrokeRow token="--ds-globals-stroke-4" rem="0.25rem"  px="4px"  usage="Anillo de foco (focus ring)" />

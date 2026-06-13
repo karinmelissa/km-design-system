@@ -1,0 +1,97 @@
+/* Karin Melissa — v2 brand scales (perceptual OKLCH ladder, hex output)
+ * ---------------------------------------------------------------------------
+ * Four brands on one perceptual lightness + chroma ladder; only the hue
+ * rotates. 11 steps (50 → 950), Tailwind/Radix-style. 500 is the pure brand
+ * hue; darker steps (700–950) carry the vintage "deep" tones.
+ *
+ * Hues:  Blue 255 · Teal 165 · Orange 58 · Magenta 350
+ * Values computed from OKLCH → sRGB → hex.
+ */
+:root {
+  /* Blue */
+  --ds-c-blue-50:  #EDF7FF;
+  --ds-c-blue-100: #DAEDFF;
+  --ds-c-blue-200: #BADCFF;
+  --ds-c-blue-300: #92C4FF;
+  --ds-c-blue-400: #63A5F9;
+  --ds-c-blue-500: #3A87E2;
+  --ds-c-blue-600: #226BC0;
+  --ds-c-blue-700: #17559B;
+  --ds-c-blue-800: #124177;
+  --ds-c-blue-900: #0D2F57;
+  --ds-c-blue-950: #0C223D;
+
+  /* Teal */
+  --ds-c-teal-50:  #EAFAF2;
+  --ds-c-teal-100: #D4F4E5;
+  --ds-c-teal-200: #ADE9CD;
+  --ds-c-teal-300: #7BD7B0;
+  --ds-c-teal-400: #2BBE8D;
+  --ds-c-teal-500: #00A26E;
+  --ds-c-teal-600: #008555;
+  --ds-c-teal-700: #006A42;
+  --ds-c-teal-800: #005133;
+  --ds-c-teal-900: #003B24;
+  --ds-c-teal-950: #002A1A;
+
+  /* Orange */
+  --ds-c-orange-50:  #FFF2E6;
+  --ds-c-orange-100: #FFE4CB;
+  --ds-c-orange-200: #FFCB9E;
+  --ds-c-orange-300: #FFAB68;
+  --ds-c-orange-400: #F39038;
+  --ds-c-orange-500: #E87F0C;
+  --ds-c-orange-600: #C26300;
+  --ds-c-orange-700: #9A4901;
+  --ds-c-orange-800: #753608;
+  --ds-c-orange-900: #552609;
+  --ds-c-orange-950: #3D1C0B;
+
+  /* Magenta */
+  --ds-c-magenta-50:  #FFF1F8;
+  --ds-c-magenta-100: #FFE0EF;
+  --ds-c-magenta-200: #FFC5E0;
+  --ds-c-magenta-300: #F9A2CB;
+  --ds-c-magenta-400: #E778B0;
+  --ds-c-magenta-500: #CD5394;
+  --ds-c-magenta-600: #AB3B79;
+  --ds-c-magenta-700: #8A2B60;
+  --ds-c-magenta-800: #6A2249;
+  --ds-c-magenta-900: #4E1835;
+  --ds-c-magenta-950: #371326;
+}
+
+/* Active brand alias — components read --ds-brand-* only. Default = Blue. */
+:root,
+[data-brand="blue"] {
+  --ds-brand-50: var(--ds-c-blue-50);   --ds-brand-100: var(--ds-c-blue-100);
+  --ds-brand-200: var(--ds-c-blue-200); --ds-brand-300: var(--ds-c-blue-300);
+  --ds-brand-400: var(--ds-c-blue-400); --ds-brand-500: var(--ds-c-blue-500);
+  --ds-brand-600: var(--ds-c-blue-600); --ds-brand-700: var(--ds-c-blue-700);
+  --ds-brand-800: var(--ds-c-blue-800); --ds-brand-900: var(--ds-c-blue-900);
+  --ds-brand-950: var(--ds-c-blue-950);
+}
+[data-brand="teal"] {
+  --ds-brand-50: var(--ds-c-teal-50);   --ds-brand-100: var(--ds-c-teal-100);
+  --ds-brand-200: var(--ds-c-teal-200); --ds-brand-300: var(--ds-c-teal-300);
+  --ds-brand-400: var(--ds-c-teal-400); --ds-brand-500: var(--ds-c-teal-500);
+  --ds-brand-600: var(--ds-c-teal-600); --ds-brand-700: var(--ds-c-teal-700);
+  --ds-brand-800: var(--ds-c-teal-800); --ds-brand-900: var(--ds-c-teal-900);
+  --ds-brand-950: var(--ds-c-teal-950);
+}
+[data-brand="orange"] {
+  --ds-brand-50: var(--ds-c-orange-50);   --ds-brand-100: var(--ds-c-orange-100);
+  --ds-brand-200: var(--ds-c-orange-200); --ds-brand-300: var(--ds-c-orange-300);
+  --ds-brand-400: var(--ds-c-orange-400); --ds-brand-500: var(--ds-c-orange-500);
+  --ds-brand-600: var(--ds-c-orange-600); --ds-brand-700: var(--ds-c-orange-700);
+  --ds-brand-800: var(--ds-c-orange-800); --ds-brand-900: var(--ds-c-orange-900);
+  --ds-brand-950: var(--ds-c-orange-950);
+}
+[data-brand="magenta"] {
+  --ds-brand-50: var(--ds-c-magenta-50);   --ds-brand-100: var(--ds-c-magenta-100);
+  --ds-brand-200: var(--ds-c-magenta-200); --ds-brand-300: var(--ds-c-magenta-300);
+  --ds-brand-400: var(--ds-c-magenta-400); --ds-brand-500: var(--ds-c-magenta-500);
+  --ds-brand-600: var(--ds-c-magenta-600); --ds-brand-700: var(--ds-c-magenta-700);
+  --ds-brand-800: var(--ds-c-magenta-800); --ds-brand-900: var(--ds-c-magenta-900);
+  --ds-brand-950: var(--ds-c-magenta-950);
+}

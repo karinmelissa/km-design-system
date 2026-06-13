@@ -1,0 +1,11 @@
+{
+  "ds": {
+    "tracking": {
+      "tighter": { "value": "-0.02em" },
+      "tight":   { "value": "-0.01em" },
+      "normal":  { "value": "0" },
+      "wide":    { "value": "0.04em" },
+      "wider":   { "value": "0.08em" }
+    }
+  }
+}

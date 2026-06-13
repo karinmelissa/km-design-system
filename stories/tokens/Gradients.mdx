@@ -1,0 +1,65 @@
+import { Meta } from "@storybook/addon-docs";
+
+<Meta title="Tokens/Gradients" />
+
+# Gradients
+
+Gradientes derivados de los valores 500 de cada escala de marca. Las paradas de color están en hex; el hint `in oklch` se conserva para que la interpolación entre tonos sea perceptualmente suave.
+
+---
+
+## Gradientes de Marca (Diagonales 135°)
+
+export const GradientSwatch = ({ token, value, label }) => (
+  <div style={{ marginBottom: '24px' }}>
+    <div style={{ background: value, height: '72px', borderRadius: '12px', marginBottom: '8px' }} />
+    <code style={{ fontSize: '0.8rem', display: 'block', color: '#5E5A55' }}>{token}</code>
+    <span style={{ fontSize: '0.75rem', color: '#99948D' }}>{label}</span>
+  </div>
+);
+
+export const GradientGrid = ({ children }) => (
+  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))', gap: '16px', marginBottom: '32px' }}>
+    {children}
+  </div>
+);
+
+<GradientGrid>
+  <GradientSwatch token="--ds-gradient-blue-magenta"   value="linear-gradient(in oklch 135deg, #3A87E2, #CD5394)" label="Blue #3A87E2 → Magenta #CD5394 · 135°" />
+  <GradientSwatch token="--ds-gradient-blue-teal"      value="linear-gradient(in oklch 135deg, #3A87E2, #00A26E)" label="Blue #3A87E2 → Teal #00A26E · 135°" />
+  <GradientSwatch token="--ds-gradient-orange-teal"    value="linear-gradient(in oklch 135deg, #E87F0C, #00A26E)" label="Orange #E87F0C → Teal #00A26E · 135°" />
+  <GradientSwatch token="--ds-gradient-orange-magenta" value="linear-gradient(in oklch 135deg, #E87F0C, #CD5394)" label="Orange #E87F0C → Magenta #CD5394 · 135°" />
+</GradientGrid>
+
+---
+
+## Rainbow — Secuencia de las cuatro marcas (90°)
+
+<GradientSwatch
+  token="--ds-gradient-rainbow"
+  value="linear-gradient(in oklch 90deg, #CD5394 0%, #3A87E2 33.3%, #00A26E 66.6%, #E87F0C 100%)"
+  label="Magenta #CD5394 → Blue #3A87E2 → Teal #00A26E → Orange #E87F0C · 90°"
+/>
+
+---
+
+## Gradientes Horizontales (90°)
+
+<GradientGrid>
+  <GradientSwatch token="--ds-gradient-blue-magenta-h"   value="linear-gradient(in oklch 90deg, #3A87E2, #CD5394)" label="Blue → Magenta · 90°" />
+  <GradientSwatch token="--ds-gradient-blue-teal-h"      value="linear-gradient(in oklch 90deg, #3A87E2, #00A26E)" label="Blue → Teal · 90°" />
+  <GradientSwatch token="--ds-gradient-orange-teal-h"    value="linear-gradient(in oklch 90deg, #E87F0C, #00A26E)" label="Orange → Teal · 90°" />
+  <GradientSwatch token="--ds-gradient-orange-magenta-h" value="linear-gradient(in oklch 90deg, #E87F0C, #CD5394)" label="Orange → Magenta · 90°" />
+</GradientGrid>
+
+---
+
+## Gradientes de Identidad (v1 — Legado)
+`--ds-globals-gradient-*`
+
+<GradientGrid>
+  <GradientSwatch token="--ds-globals-gradient-purpleblue-horizontally-dark"  value="linear-gradient(90deg, #232272 0%, #12122B 100%)"                                      label="Purple–Blue oscuro · 90°" />
+  <GradientSwatch token="--ds-globals-gradient-purpleblue-horizontally-light" value="linear-gradient(90deg, #232272 0%, #5F5ECF 100%)"                                      label="Purple–Blue claro · 90°" />
+  <GradientSwatch token="--ds-globals-gradient-purpleblue-vertically-light"   value="linear-gradient(180deg, #232272 0%, #5F5ECF 100%)"                                     label="Purple–Blue claro · 180°" />
+  <GradientSwatch token="--ds-globals-gradient-purplered-diagonally"          value="linear-gradient(168deg, #232272 0%, #6A2E92 57%, #9A1F87 78%, #E60D2E 100%)"           label="Purple–Red · 168°" />
+</GradientGrid>

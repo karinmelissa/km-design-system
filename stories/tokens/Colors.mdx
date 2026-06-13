@@ -8,105 +8,119 @@ import {
 
 # Colors
 
-## Colores Primarios (Primary Colors)
-
-Los Colores Primarios son los colores principales asociados a las diferentes marcas y sus productos digitales. Son los tonos base y sus variaciones del 10 al 70, del más claro al más oscuro.
+Dos capas de color. La **capa de primitivos** define las escalas de 7 pasos de cada marca. La **capa de alias** (`--ds-primary-color-*`) es el puntero activo que cambia con el stylesheet del tema.
 
 ---
 
-### Indigo
+## Colores Primarios (Primary Colors)
+
+### Indigo — Theme 1 · Blue
+`--ds-theme1-primary-*` · alias: `--ds-primary-color-*`
 <ColorPalette>
-  <ColorItem title="Primary 10" subtitle="--ds-indigo-primary-10" colors={{ 10: '#E0E6F0' }} />
-  <ColorItem title="Primary 20" subtitle="--ds-indigo-primary-20" colors={{ 20: '#A2B2CC' }} />
-  <ColorItem title="Primary 30" subtitle="--ds-indigo-primary-30" colors={{ 30: '#62759E' }} />
-  <ColorItem title="Primary 40" subtitle="--ds-indigo-primary-40" colors={{ 40: '#3A507A' }} />
-  <ColorItem title="Primary 50" subtitle="--ds-indigo-primary-50" colors={{ 50: '#244162' }} />
-  <ColorItem title="Primary 60" subtitle="--ds-indigo-primary-60" colors={{ 60: '#1B314C' }} />
-  <ColorItem title="Primary 70" subtitle="--ds-indigo-primary-70" colors={{ 70: '#122238' }} />
+  <ColorItem title="Primary 10" subtitle="--ds-theme1-primary-10" colors={{ "10": "#DAEDFF" }} />
+  <ColorItem title="Primary 20" subtitle="--ds-theme1-primary-20" colors={{ "20": "#BADCFF" }} />
+  <ColorItem title="Primary 30" subtitle="--ds-theme1-primary-30" colors={{ "30": "#92C4FF" }} />
+  <ColorItem title="Primary 40" subtitle="--ds-theme1-primary-40" colors={{ "40": "#3A87E2" }} />
+  <ColorItem title="Primary 50" subtitle="--ds-theme1-primary-50" colors={{ "50": "#226BC0" }} />
+  <ColorItem title="Primary 60" subtitle="--ds-theme1-primary-60" colors={{ "60": "#17559B" }} />
+  <ColorItem title="Primary 70" subtitle="--ds-theme1-primary-70" colors={{ "70": "#124177" }} />
 </ColorPalette>
 
-### Viridian
+### Viridian — Theme 2 · Teal
+`--ds-theme2-primary-*`
 <ColorPalette>
-  <ColorItem title="Primary 10" subtitle="--ds-viridian-primary-10" colors={{ 10: '#D4ECE4' }} />
-  <ColorItem title="Primary 20" subtitle="--ds-viridian-primary-20" colors={{ 20: '#A1D5C3' }} />
-  <ColorItem title="Primary 30" subtitle="--ds-viridian-primary-30" colors={{ 30: '#6FBEA1' }} />
-  <ColorItem title="Primary 40" subtitle="--ds-viridian-primary-40" colors={{ 40: '#4AA585' }} />
-  <ColorItem title="Primary 50" subtitle="--ds-viridian-primary-50" colors={{ 50: '#3A806A' }} />
-  <ColorItem title="Primary 60" subtitle="--ds-viridian-primary-60" colors={{ 60: '#2B6150' }} />
-  <ColorItem title="Primary 70" subtitle="--ds-viridian-primary-70" colors={{ 70: '#1C4136' }} />
+  <ColorItem title="Primary 10" subtitle="--ds-theme2-primary-10" colors={{ "10": "#D4F4E5" }} />
+  <ColorItem title="Primary 20" subtitle="--ds-theme2-primary-20" colors={{ "20": "#ADE9CD" }} />
+  <ColorItem title="Primary 30" subtitle="--ds-theme2-primary-30" colors={{ "30": "#7BD7B0" }} />
+  <ColorItem title="Primary 40" subtitle="--ds-theme2-primary-40" colors={{ "40": "#00A26E" }} />
+  <ColorItem title="Primary 50" subtitle="--ds-theme2-primary-50" colors={{ "50": "#008555" }} />
+  <ColorItem title="Primary 60" subtitle="--ds-theme2-primary-60" colors={{ "60": "#006A42" }} />
+  <ColorItem title="Primary 70" subtitle="--ds-theme2-primary-70" colors={{ "70": "#005133" }} />
 </ColorPalette>
 
-### Tangerine
+### Tangerine — Theme 3 · Orange
+`--ds-theme3-primary-*`
 <ColorPalette>
-  <ColorItem title="Primary 10" subtitle="--ds-tangerine-primary-10" colors={{ 10: '#FFE8CC' }} />
-  <ColorItem title="Primary 20" subtitle="--ds-tangerine-primary-20" colors={{ 20: '#FFC780' }} />
-  <ColorItem title="Primary 30" subtitle="--ds-tangerine-primary-30" colors={{ 30: '#F9A43D' }} />
-  <ColorItem title="Primary 40" subtitle="--ds-tangerine-primary-40" colors={{ 40: '#F69217' }} />
-  <ColorItem title="Primary 50" subtitle="--ds-tangerine-primary-50" colors={{ 50: '#F3870B' }} />
-  <ColorItem title="Primary 60" subtitle="--ds-tangerine-primary-60" colors={{ 60: '#C96A07' }} />
-  <ColorItem title="Primary 70" subtitle="--ds-tangerine-primary-70" colors={{ 70: '#9E5105' }} />
+  <ColorItem title="Primary 10" subtitle="--ds-theme3-primary-10" colors={{ "10": "#FFE4CB" }} />
+  <ColorItem title="Primary 20" subtitle="--ds-theme3-primary-20" colors={{ "20": "#FFCB9E" }} />
+  <ColorItem title="Primary 30" subtitle="--ds-theme3-primary-30" colors={{ "30": "#FFAB68" }} />
+  <ColorItem title="Primary 40" subtitle="--ds-theme3-primary-40" colors={{ "40": "#E87F0C" }} />
+  <ColorItem title="Primary 50" subtitle="--ds-theme3-primary-50" colors={{ "50": "#C26300" }} />
+  <ColorItem title="Primary 60" subtitle="--ds-theme3-primary-60" colors={{ "60": "#9A4901" }} />
+  <ColorItem title="Primary 70" subtitle="--ds-theme3-primary-70" colors={{ "70": "#753608" }} />
 </ColorPalette>
 
-
-### Murrey
+### Murrey — Theme 4 · Magenta
+`--ds-theme4-primary-*`
 <ColorPalette>
-  <ColorItem title="Primary 10" subtitle="--ds-murrey-primary-10" colors={{ 10: '#F2D7E4' }} />
-  <ColorItem title="Primary 20" subtitle="--ds-murrey-primary-20" colors={{ 20: '#E198B9' }} />
-  <ColorItem title="Primary 30" subtitle="--ds-murrey-primary-30" colors={{ 30: '#C6598D' }} />
-  <ColorItem title="Primary 40" subtitle="--ds-murrey-primary-40" colors={{ 40: '#A72D6C' }} />
-  <ColorItem title="Primary 50" subtitle="--ds-murrey-primary-50" colors={{ 50: '#960651' }} />
-  <ColorItem title="Primary 60" subtitle="--ds-murrey-primary-60" colors={{ 60: '#6E043B' }} />
-  <ColorItem title="Primary 70" subtitle="--ds-murrey-primary-70" colors={{ 70: '#4B0228' }} />
+  <ColorItem title="Primary 10" subtitle="--ds-theme4-primary-10" colors={{ "10": "#FFE0EF" }} />
+  <ColorItem title="Primary 20" subtitle="--ds-theme4-primary-20" colors={{ "20": "#FFC5E0" }} />
+  <ColorItem title="Primary 30" subtitle="--ds-theme4-primary-30" colors={{ "30": "#F9A2CB" }} />
+  <ColorItem title="Primary 40" subtitle="--ds-theme4-primary-40" colors={{ "40": "#CD5394" }} />
+  <ColorItem title="Primary 50" subtitle="--ds-theme4-primary-50" colors={{ "50": "#AB3B79" }} />
+  <ColorItem title="Primary 60" subtitle="--ds-theme4-primary-60" colors={{ "60": "#8A2B60" }} />
+  <ColorItem title="Primary 70" subtitle="--ds-theme4-primary-70" colors={{ "70": "#6A2249" }} />
 </ColorPalette>
+
+---
 
 ## Neutrales
+`--ds-globals-color-neutrals-*`
 <ColorPalette>
-  <ColorItem title="Neutral 0" colors={{ 0: "#FFFFFF" }} />
-  <ColorItem title="Neutral 10" colors={{ 10: "#E4E2DD" }} />
-  <ColorItem title="Neutral 20" colors={{ 20: "#D9D6D0" }} />
-  <ColorItem title="Neutral 30" colors={{ 30: "#CBC7C0" }} />
-  <ColorItem title="Neutral 40" colors={{ 40: "#BEBAB2" }} />
-  <ColorItem title="Neutral 50" colors={{ 50: "#AFAAA3" }} />
-  <ColorItem title="Neutral 60" colors={{ 60: "#99948D" }} />
-  <ColorItem title="Neutral 70" colors={{ 70: "#7F7A73" }} />
-  <ColorItem title="Neutral 80" colors={{ 80: "#5E5A55" }} />
-  <ColorItem title="Neutral 90" colors={{ 90: "#3B3936" }} />
-  <ColorItem title="Neutral 100" colors={{ 100: "#292826" }} />
-  <ColorItem title="Black" colors={{ black: "#292929" }} />
+  <ColorItem title="Neutral 0"   subtitle="--ds-globals-color-neutrals-0"   colors={{ White: "#FFFFFF" }} />
+  <ColorItem title="Neutral 10"  subtitle="--ds-globals-color-neutrals-10"  colors={{ Sand: "#E4E2DD" }} />
+  <ColorItem title="Neutral 20"  subtitle="--ds-globals-color-neutrals-20"  colors={{ "20": "#D9D6D0" }} />
+  <ColorItem title="Neutral 30"  subtitle="--ds-globals-color-neutrals-30"  colors={{ "30": "#CBC7C0" }} />
+  <ColorItem title="Neutral 40"  subtitle="--ds-globals-color-neutrals-40"  colors={{ "40": "#BEBAB2" }} />
+  <ColorItem title="Neutral 50"  subtitle="--ds-globals-color-neutrals-50"  colors={{ "50": "#AFAAA3" }} />
+  <ColorItem title="Neutral 60"  subtitle="--ds-globals-color-neutrals-60"  colors={{ "60": "#99948D" }} />
+  <ColorItem title="Neutral 70"  subtitle="--ds-globals-color-neutrals-70"  colors={{ "70": "#7F7A73" }} />
+  <ColorItem title="Neutral 80"  subtitle="--ds-globals-color-neutrals-80"  colors={{ "80": "#5E5A55" }} />
+  <ColorItem title="Neutral 90"  subtitle="--ds-globals-color-neutrals-90"  colors={{ "90": "#3B3936" }} />
+  <ColorItem title="Neutral 100" subtitle="--ds-globals-color-neutrals-100" colors={{ Charcoal: "#292826" }} />
+  <ColorItem title="Black"       subtitle="--ds-globals-color-neutrals-black" colors={{ Black: "#292929" }} />
 </ColorPalette>
 
-## Success
+---
+
+## Colores Semánticos de Feedback
+
+### Success — verde limpio
+`--ds-globals-color-success-*`
 <ColorPalette>
-  <ColorItem title="Success 10" colors={{ 10: "#E1EDE1" }} />
-  <ColorItem title="Success 20" colors={{ 20: "#C8E0C8" }} />
-  <ColorItem title="Success 30" colors={{ 30: "#6A8A6A" }} />
-  <ColorItem title="Success 40" colors={{ 40: "#4B6B4B" }} />
-  <ColorItem title="Success 50" colors={{ 50: "#2E4E2E" }} />
+  <ColorItem title="Success 10" subtitle="--ds-globals-color-success-10" colors={{ "10": "#E5F3E4" }} />
+  <ColorItem title="Success 20" subtitle="--ds-globals-color-success-20" colors={{ "20": "#C0E3C0" }} />
+  <ColorItem title="Success 30" subtitle="--ds-globals-color-success-30" colors={{ "30": "#6AB76D" }} />
+  <ColorItem title="Success 40" subtitle="--ds-globals-color-success-40" colors={{ "40": "#308639" }} />
+  <ColorItem title="Success 50" subtitle="--ds-globals-color-success-50" colors={{ "50": "#0B5417" }} />
 </ColorPalette>
 
-## Error
+### Error — rojo inequívoco
+`--ds-globals-color-error-*`
 <ColorPalette>
-  <ColorItem title="Error 10" colors={{ 10: "#FDEFF1" }} />
-  <ColorItem title="Error 20" colors={{ 20: "#F4C9CF" }} />
-  <ColorItem title="Error 30" colors={{ 30: "#C84D5F" }} />
-  <ColorItem title="Error 40" colors={{ 40: "#A03B4B" }} />
-  <ColorItem title="Error 50" colors={{ 50: "#7A2B3A" }} />
+  <ColorItem title="Error 10" subtitle="--ds-globals-color-error-10" colors={{ "10": "#FDE9E8" }} />
+  <ColorItem title="Error 20" subtitle="--ds-globals-color-error-20" colors={{ "20": "#FCC9C8" }} />
+  <ColorItem title="Error 30" subtitle="--ds-globals-color-error-30" colors={{ "30": "#E46F72" }} />
+  <ColorItem title="Error 40" subtitle="--ds-globals-color-error-40" colors={{ "40": "#AE3F46" }} />
+  <ColorItem title="Error 50" subtitle="--ds-globals-color-error-50" colors={{ "50": "#731E26" }} />
 </ColorPalette>
 
-## Warning
+### Warning — ámbar cálido
+`--ds-globals-color-warning-*`
 <ColorPalette>
-  <ColorItem title="Warning 10" colors={{ 10: "#FBF3DE" }} />
-  <ColorItem title="Warning 20" colors={{ 20: "#F4E2C0" }} />
-  <ColorItem title="Warning 30" colors={{ 30: "#A38850" }} />
-  <ColorItem title="Warning 40" colors={{ 40: "#81673D" }} />
-  <ColorItem title="Warning 50" colors={{ 50: "#5D4B2B" }} />
+  <ColorItem title="Warning 10" subtitle="--ds-globals-color-warning-10" colors={{ "10": "#FFEDE0" }} />
+  <ColorItem title="Warning 20" subtitle="--ds-globals-color-warning-20" colors={{ "20": "#FFD3B4" }} />
+  <ColorItem title="Warning 30" subtitle="--ds-globals-color-warning-30" colors={{ "30": "#F59E60" }} />
+  <ColorItem title="Warning 40" subtitle="--ds-globals-color-warning-40" colors={{ "40": "#CA7027" }} />
+  <ColorItem title="Warning 50" subtitle="--ds-globals-color-warning-50" colors={{ "50": "#8F4802" }} />
 </ColorPalette>
 
-## Info
+### Info — azul cielo
+`--ds-globals-color-info-*`
 <ColorPalette>
-  <ColorItem title="Info 10" colors={{ 10: "#D9EDF7" }} />
-  <ColorItem title="Info 20" colors={{ 20: "#B6DEE8" }} />
-  <ColorItem title="Info 30" colors={{ 30: "#5B8A96" }} />
-  <ColorItem title="Info 40" colors={{ 40: "#406875" }} />
-  <ColorItem title="Info 50" colors={{ 50: "#2C4B57" }} />
+  <ColorItem title="Info 10" subtitle="--ds-globals-color-info-10" colors={{ "10": "#DFF3F8" }} />
+  <ColorItem title="Info 20" subtitle="--ds-globals-color-info-20" colors={{ "20": "#AFE1EE" }} />
+  <ColorItem title="Info 30" subtitle="--ds-globals-color-info-30" colors={{ "30": "#1CB2CE" }} />
+  <ColorItem title="Info 40" subtitle="--ds-globals-color-info-40" colors={{ "40": "#0084A0" }} />
+  <ColorItem title="Info 50" subtitle="--ds-globals-color-info-50" colors={{ "50": "#00566C" }} />
 </ColorPalette>

@@ -1,0 +1,10 @@
+{
+  "ds": {
+    "leading": {
+      "tight":   { "value": "1.1" },
+      "snug":    { "value": "1.3" },
+      "normal":  { "value": "1.5" },
+      "relaxed": { "value": "1.65" }
+    }
+  }
+}

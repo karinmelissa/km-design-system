@@ -27,26 +27,26 @@
   --ds-globals-color-neutrals-90: #3B3936;
   --ds-globals-color-neutrals-100: #292826;
   --ds-globals-color-neutrals-black: #292929;
-  --ds-globals-color-success-10: #E1EDE1;
-  --ds-globals-color-success-20: #C8E0C8;
-  --ds-globals-color-success-30: #6A8A6A;
-  --ds-globals-color-success-40: #4B6B4B;
-  --ds-globals-color-success-50: #2E4E2E;
-  --ds-globals-color-error-10: #FDEFF1;
-  --ds-globals-color-error-20: #F4C9CF;
-  --ds-globals-color-error-30: #C84D5F;
-  --ds-globals-color-error-40: #A03B4B;
-  --ds-globals-color-error-50: #7A2B3A;
-  --ds-globals-color-warning-10: #FBF3DE;
-  --ds-globals-color-warning-20: #F4E2C0;
-  --ds-globals-color-warning-30: #A38850;
-  --ds-globals-color-warning-40: #81673D;
-  --ds-globals-color-warning-50: #5D4B2B;
-  --ds-globals-color-info-10: #D9EDF7;
-  --ds-globals-color-info-20: #B6DEE8;
-  --ds-globals-color-info-30: #5B8A96;
-  --ds-globals-color-info-40: #406875;
-  --ds-globals-color-info-50: #2C4B57;
+  --ds-globals-color-success-10: #E5F3E4;
+  --ds-globals-color-success-20: #C0E3C0;
+  --ds-globals-color-success-30: #6AB76D;
+  --ds-globals-color-success-40: #308639;
+  --ds-globals-color-success-50: #0B5417;
+  --ds-globals-color-error-10: #FDE9E8;
+  --ds-globals-color-error-20: #FCC9C8;
+  --ds-globals-color-error-30: #E46F72;
+  --ds-globals-color-error-40: #AE3F46;
+  --ds-globals-color-error-50: #731E26;
+  --ds-globals-color-warning-10: #FFEDE0;
+  --ds-globals-color-warning-20: #FFD3B4;
+  --ds-globals-color-warning-30: #F59E60;
+  --ds-globals-color-warning-40: #CA7027;
+  --ds-globals-color-warning-50: #8F4802;
+  --ds-globals-color-info-10: #DFF3F8;
+  --ds-globals-color-info-20: #AFE1EE;
+  --ds-globals-color-info-30: #1CB2CE;
+  --ds-globals-color-info-40: #0084A0;
+  --ds-globals-color-info-50: #00566C;
   --ds-globals-elevation-shadow-5: 0px 4px 20px 0px rgba(36, 36, 38, 0.05);
   --ds-globals-elevation-shadow-10: 0px 4px 20px 0px rgba(36, 36, 38, 0.10);
   --ds-globals-elevation-shadow-15: 0px 4px 20px 0px rgba(36, 36, 38, 0.15);
@@ -106,13 +106,40 @@
   --ds-globals-stroke-2: 0.125rem;
   --ds-globals-stroke-3: 0.188rem;
   --ds-globals-stroke-4: 0.25rem;
-  --ds-theme2-primary-10: #D4ECE4;
-  --ds-theme2-primary-20: #A1D5C3;
-  --ds-theme2-primary-30: #6FBEA1;
-  --ds-theme2-primary-40: #4AA585;
-  --ds-theme2-primary-50: #3A806A;
-  --ds-theme2-primary-60: #2B6150;
-  --ds-theme2-primary-70: #1C4136;
+  --ds-leading-tight: 1.1;
+  --ds-leading-snug: 1.3;
+  --ds-leading-normal: 1.5;
+  --ds-leading-relaxed: 1.65;
+  --ds-tracking-tighter: -0.02em;
+  --ds-tracking-tight: -0.01em;
+  --ds-tracking-normal: 0;
+  --ds-tracking-wide: 0.04em;
+  --ds-tracking-wider: 0.08em;
+  --ds-text-xs: 0.75rem;
+  --ds-text-sm: 0.875rem;
+  --ds-text-md: 1rem;
+  --ds-text-lg: 1.25rem;
+  --ds-text-xl: 1.5rem;
+  --ds-text-2xl: 2rem;
+  --ds-text-3xl: 2.5rem;
+  --ds-text-4xl: 3.25rem;
+  --ds-text-5xl: 4.25rem;
+  --ds-gradient-blue-magenta: linear-gradient(in oklch 135deg, #3A87E2, #CD5394);
+  --ds-gradient-blue-teal: linear-gradient(in oklch 135deg, #3A87E2, #00A26E);
+  --ds-gradient-orange-teal: linear-gradient(in oklch 135deg, #E87F0C, #00A26E);
+  --ds-gradient-orange-magenta: linear-gradient(in oklch 135deg, #E87F0C, #CD5394);
+  --ds-gradient-rainbow: linear-gradient(in oklch 90deg, #CD5394 0%, #3A87E2 33.3%, #00A26E 66.6%, #E87F0C 100%);
+  --ds-gradient-blue-magenta-h: linear-gradient(in oklch 90deg, #3A87E2, #CD5394);
+  --ds-gradient-blue-teal-h: linear-gradient(in oklch 90deg, #3A87E2, #00A26E);
+  --ds-gradient-orange-teal-h: linear-gradient(in oklch 90deg, #E87F0C, #00A26E);
+  --ds-gradient-orange-magenta-h: linear-gradient(in oklch 90deg, #E87F0C, #CD5394);
+  --ds-theme2-primary-10: #D4F4E5;
+  --ds-theme2-primary-20: #ADE9CD;
+  --ds-theme2-primary-30: #7BD7B0;
+  --ds-theme2-primary-40: #00A26E;
+  --ds-theme2-primary-50: #008555;
+  --ds-theme2-primary-60: #006A42;
+  --ds-theme2-primary-70: #005133;
   --ds-globals-gradient-horizontally-dark: var(--ds-globals-gradient-purpleblue-horizontally-dark);
   --ds-globals-gradient-horizontally-light: var(--ds-globals-gradient-purpleblue-horizontally-light);
   --ds-globals-gradient-vertically-light: var(--ds-globals-gradient-purpleblue-horizontally-light);
@@ -124,4 +151,116 @@
   --ds-primary-color-50: var(--ds-theme2-primary-50);
   --ds-primary-color-60: var(--ds-theme2-primary-60);
   --ds-primary-color-70: var(--ds-theme2-primary-70);
+}
+
+/* Karin Melissa — semantic role layer + dark mode
+ * Appended to each per-theme CSS output by writeTokens.js.
+ * Dark surfaces use warm hex values derived from OKLCH (hue ~70–80)
+ * to preserve the brand's clay character — not pure black/gray.
+ */
+
+/* ----- Light (default) role variables ------------------------------------ */
+:root {
+  --ds-color-surface:         var(--ds-globals-color-neutrals-0);
+  --ds-color-surface-sunken:  var(--ds-globals-color-neutrals-10);
+  --ds-color-surface-raised:  var(--ds-globals-color-neutrals-0);
+  --ds-color-surface-inverse: var(--ds-globals-color-neutrals-100);
+
+  --ds-color-text-primary:   var(--ds-globals-color-neutrals-100);
+  --ds-color-text-secondary: var(--ds-globals-color-neutrals-70);
+  --ds-color-text-disabled:  var(--ds-globals-color-neutrals-50);
+  --ds-color-text-inverse:   var(--ds-globals-color-neutrals-0);
+
+  --ds-color-border:        var(--ds-globals-color-neutrals-20);
+  --ds-color-border-strong: var(--ds-globals-color-neutrals-40);
+
+  --ds-color-action:        var(--ds-primary-color-60);
+  --ds-color-action-hover:  var(--ds-primary-color-70);
+  --ds-color-action-active: var(--ds-primary-color-70);
+  --ds-color-action-subtle: color-mix(in srgb, var(--ds-primary-color-50) 12%, var(--ds-globals-color-neutrals-0));
+  --ds-color-on-action:     var(--ds-globals-color-neutrals-0);
+  --ds-color-accent:        var(--ds-primary-color-50);
+  --ds-color-focus-ring:    var(--ds-primary-color-40);
+
+  color-scheme: light;
+}
+
+/* ----- Dark mode -------------------------------------------------------- */
+:root[data-mode="dark"],
+[data-mode="dark"] {
+  --ds-color-surface:         #1B1916;
+  --ds-color-surface-sunken:  #110F0D;
+  --ds-color-surface-raised:  #262320;
+  --ds-color-surface-inverse: var(--ds-globals-color-neutrals-10);
+
+  --ds-color-text-primary:   #F1EEE9;
+  --ds-color-text-secondary: #BBB7B0;
+  --ds-color-text-disabled:  #78746E;
+  --ds-color-text-inverse:   var(--ds-globals-color-neutrals-100);
+
+  --ds-color-border:        #36322E;
+  --ds-color-border-strong: #534F4A;
+
+  --ds-color-action:        var(--ds-primary-color-30);
+  --ds-color-action-hover:  var(--ds-primary-color-20);
+  --ds-color-action-active: var(--ds-primary-color-10);
+  --ds-color-action-subtle: color-mix(in srgb, var(--ds-primary-color-40) 22%, #1B1916);
+  --ds-color-on-action:     #110F0D;
+  --ds-color-accent:        var(--ds-primary-color-30);
+  --ds-color-focus-ring:    var(--ds-primary-color-30);
+
+  color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ds-color-surface:         #1B1916;
+    --ds-color-surface-sunken:  #110F0D;
+    --ds-color-surface-raised:  #262320;
+    --ds-color-surface-inverse: var(--ds-globals-color-neutrals-10);
+
+    --ds-color-text-primary:   #F1EEE9;
+    --ds-color-text-secondary: #BBB7B0;
+    --ds-color-text-disabled:  #78746E;
+    --ds-color-text-inverse:   var(--ds-globals-color-neutrals-100);
+
+    --ds-color-border:        #36322E;
+    --ds-color-border-strong: #534F4A;
+
+    --ds-color-action:        var(--ds-primary-color-30);
+    --ds-color-action-hover:  var(--ds-primary-color-20);
+    --ds-color-action-active: var(--ds-primary-color-10);
+    --ds-color-action-subtle: color-mix(in srgb, var(--ds-primary-color-40) 22%, #1B1916);
+    --ds-color-on-action:     #110F0D;
+    --ds-color-accent:        var(--ds-primary-color-30);
+    --ds-color-focus-ring:    var(--ds-primary-color-30);
+
+    color-scheme: dark;
+  }
+}
+
+/* Explicit light — wins over OS preference */
+[data-mode="light"] {
+  --ds-color-surface:         var(--ds-globals-color-neutrals-0);
+  --ds-color-surface-sunken:  var(--ds-globals-color-neutrals-10);
+  --ds-color-surface-raised:  var(--ds-globals-color-neutrals-0);
+  --ds-color-surface-inverse: var(--ds-globals-color-neutrals-100);
+
+  --ds-color-text-primary:   var(--ds-globals-color-neutrals-100);
+  --ds-color-text-secondary: var(--ds-globals-color-neutrals-70);
+  --ds-color-text-disabled:  var(--ds-globals-color-neutrals-50);
+  --ds-color-text-inverse:   var(--ds-globals-color-neutrals-0);
+
+  --ds-color-border:        var(--ds-globals-color-neutrals-20);
+  --ds-color-border-strong: var(--ds-globals-color-neutrals-40);
+
+  --ds-color-action:        var(--ds-primary-color-60);
+  --ds-color-action-hover:  var(--ds-primary-color-70);
+  --ds-color-action-active: var(--ds-primary-color-70);
+  --ds-color-action-subtle: color-mix(in srgb, var(--ds-primary-color-50) 12%, var(--ds-globals-color-neutrals-0));
+  --ds-color-on-action:     var(--ds-globals-color-neutrals-0);
+  --ds-color-accent:        var(--ds-primary-color-50);
+  --ds-color-focus-ring:    var(--ds-primary-color-40);
+
+  color-scheme: light;
 }

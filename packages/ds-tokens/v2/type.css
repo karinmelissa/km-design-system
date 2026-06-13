@@ -1,0 +1,33 @@
+/* Karin Melissa — v2 typography tokens
+ * ---------------------------------------------------------------------------
+ * Tightened, ratio-based scale + unitless leading + a real tracking scale.
+ * These sit alongside the v1 --ds-globals-font-size-* tokens; new work should
+ * prefer these.
+ *
+ * ~1.25 modular ratio, 9 steps (base = md / 16px).
+ */
+:root {
+  /* Type scale */
+  --ds-text-xs:  0.75rem;  /* 12 — captions, eyebrows */
+  --ds-text-sm:  0.875rem; /* 14 — secondary / dense UI */
+  --ds-text-md:  1rem;     /* 16 — body (base) */
+  --ds-text-lg:  1.25rem;  /* 20 — lead / large body */
+  --ds-text-xl:  1.5rem;   /* 24 — h5 / card titles */
+  --ds-text-2xl: 2rem;     /* 32 — h3 */
+  --ds-text-3xl: 2.5rem;   /* 40 — h1 */
+  --ds-text-4xl: 3.25rem;  /* 52 — display s */
+  --ds-text-5xl: 4.25rem;  /* 68 — display l (Baloo hero) */
+
+  /* Line height — unitless, travels with the font size. */
+  --ds-leading-tight:   1.1;  /* display & large headings */
+  --ds-leading-snug:    1.3;  /* small headings */
+  --ds-leading-normal:  1.5;  /* body */
+  --ds-leading-relaxed: 1.65; /* long-form reading */
+
+  /* Letter spacing */
+  --ds-tracking-tighter: -0.02em; /* 40px+ display */
+  --ds-tracking-tight:   -0.01em; /* headings */
+  --ds-tracking-normal:  0;       /* body */
+  --ds-tracking-wide:    0.04em;  /* labels */
+  --ds-tracking-wider:   0.08em;  /* ALL-CAPS eyebrows */
+}
